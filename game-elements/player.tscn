@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7se7nbol2koi" path="res://scripts/camera_pivot.gd" id="1_8cxuj"]
 [ext_resource type="Script" uid="uid://bdd6g1kledbcc" path="res://scripts/player.gd" id="1_yg385"]
-[ext_resource type="Shader" path="res://game-elements/shaders/outline.gdshader" id="3_0owfj"]
+[ext_resource type="Shader" uid="uid://505mpqnvv57c" path="res://game-elements/shaders/outline.gdshader" id="3_0owfj"]
 [ext_resource type="Shader" uid="uid://cjo3oo6xq6ppo" path="res://game-elements/shaders/celshader.gdshader" id="3_6kh4p"]
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="4_0owfj"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="5_w6y2a"]
