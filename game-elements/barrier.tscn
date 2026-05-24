@@ -6,35 +6,35 @@
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="4_5oegf"]
 [ext_resource type="Script" uid="uid://bs3ugc7gpcb54" path="res://scripts/barrier.gd" id="5_rqa58"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_om75w"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dw2qa"]
+size = Vector3(6.954468, 3.074463, 5.0085526)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iqklc"]
 size = Vector3(5, 3, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xu15f"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qu6cu"]
 render_priority = 0
 shader = ExtResource("1_dw2qa")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_width = 2.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_akf43"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d58au"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_xu15f")
+next_pass = SubResource("ShaderMaterial_qu6cu")
 shader = ExtResource("2_rqa58")
-shader_parameter/albedo = Color(0.8980392, 0, 0.23921569, 1)
+shader_parameter/albedo = Color(0.7058824, 0, 0.21960784, 1)
 shader_parameter/color_gradient = ExtResource("3_bva0l")
 shader_parameter/fresnel_gradient = ExtResource("4_5oegf")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iqklc"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dw2qa"]
 points = PackedVector3Array(2.5, 1.5, 0.5, 2.5, 1.5, -0.5, -2.5, 1.5, 0.5, 2.5, -1.5, 0.5, 2.5, -1.5, -0.5, -2.5, 1.5, -0.5, -2.5, -1.5, 0.5, -2.5, -1.5, -0.5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dw2qa"]
-size = Vector3(5.688965, 3.6035156, 2.3815155)
-
-[sub_resource type="Animation" id="Animation_dw2qa"]
+[sub_resource type="Animation" id="Animation_bva0l"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("MeshInstance3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -46,15 +46,15 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_rqa58"]
 resource_name = "shake"
-length = 0.36
+length = 0.27
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("MeshInstance3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.10000001, 0.20000002, 0.26666668, 0.36666667),
+"times": PackedFloat32Array(0, 0.06666667, 0.1, 0.16666667, 0.26666668),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.1), Vector3(0, 0, 0), Vector3(0, 0, -0.1), Vector3(0, 0, 0)]
@@ -62,25 +62,28 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bva0l"]
 _data = {
-&"RESET": SubResource("Animation_dw2qa"),
+&"RESET": SubResource("Animation_bva0l"),
 &"shake": SubResource("Animation_rqa58")
 }
 
-[node name="Barrier" type="MeshInstance3D" unique_id=704768948]
-mesh = SubResource("BoxMesh_om75w")
-surface_material_override/0 = SubResource("ShaderMaterial_akf43")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1553292051]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1008479798]
-shape = SubResource("ConvexPolygonShape3D_iqklc")
-
-[node name="InteractionArea" type="Area3D" parent="." unique_id=1148839746]
+[node name="Barrier" type="Area3D" unique_id=1751531890]
 script = ExtResource("5_rqa58")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=1736659856]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026611328, -0.0029296875, 0.06757355)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=4734304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14898682, 0.19299316, -0.19496405)
 shape = SubResource("BoxShape3D_dw2qa")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=513474334]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=514046629]
+mesh = SubResource("BoxMesh_iqklc")
+surface_material_override/0 = SubResource("ShaderMaterial_d58au")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=2045338739]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1996735933]
+shape = SubResource("ConvexPolygonShape3D_dw2qa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=784865688]
 libraries/ = SubResource("AnimationLibrary_bva0l")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

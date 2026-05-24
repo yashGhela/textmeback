@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://p7jh47ljc7oj"]
 
 [ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="1_hnn2g"]
+[ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="2_3xhu2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnn2g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,3 +41,7 @@ shape = SubResource("ConvexPolygonShape3D_stvgd")
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("1_hnn2g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.818861, 1.6111116, -2.5348568)
+
+[node name="Barrier" parent="." unique_id=545010965 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1364832, 2.1111126, 3.5728974)
+Player = NodePath("../Player")
