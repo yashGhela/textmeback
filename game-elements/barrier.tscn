@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://cjo3oo6xq6ppo" path="res://game-elements/shaders/celshader.gdshader" id="2_rqa58"]
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="3_bva0l"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="4_5oegf"]
+[ext_resource type="Script" uid="uid://bs3ugc7gpcb54" path="res://scripts/barrier.gd" id="5_rqa58"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_om75w"]
 size = Vector3(5, 3, 1)
@@ -28,6 +29,43 @@ points = PackedVector3Array(2.5, 1.5, 0.5, 2.5, 1.5, -0.5, -2.5, 1.5, 0.5, 2.5, 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dw2qa"]
 size = Vector3(5.688965, 3.6035156, 2.3815155)
 
+[sub_resource type="Animation" id="Animation_dw2qa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rqa58"]
+resource_name = "shake"
+length = 0.36
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.10000001, 0.20000002, 0.26666668, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.1), Vector3(0, 0, 0), Vector3(0, 0, -0.1), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bva0l"]
+_data = {
+&"RESET": SubResource("Animation_dw2qa"),
+&"shake": SubResource("Animation_rqa58")
+}
+
 [node name="Barrier" type="MeshInstance3D" unique_id=704768948]
 mesh = SubResource("BoxMesh_om75w")
 surface_material_override/0 = SubResource("ShaderMaterial_akf43")
@@ -38,7 +76,11 @@ surface_material_override/0 = SubResource("ShaderMaterial_akf43")
 shape = SubResource("ConvexPolygonShape3D_iqklc")
 
 [node name="InteractionArea" type="Area3D" parent="." unique_id=1148839746]
+script = ExtResource("5_rqa58")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=1736659856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026611328, -0.0029296875, 0.06757355)
 shape = SubResource("BoxShape3D_dw2qa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=513474334]
+libraries/ = SubResource("AnimationLibrary_bva0l")

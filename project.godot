@@ -14,6 +14,10 @@ config/name="textmeback"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Signalbus="*uid://bbqngs0rr1kau"
+
 [input]
 
 forward={
