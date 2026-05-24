@@ -43,5 +43,5 @@ shape = SubResource("ConvexPolygonShape3D_stvgd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.818861, 1.6111116, -2.5348568)
 
 [node name="Barrier" parent="." unique_id=1751531890 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 2.1111107, 5.27178)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.9842508, 5.27178)
 Player = NodePath("../Player")
