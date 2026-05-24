@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://df1ey8l4lmwag"]
+
+[ext_resource type="Shader" uid="uid://505mpqnvv57c" path="res://game-elements/shaders/outline.gdshader" id="1_dw2qa"]
+[ext_resource type="Shader" uid="uid://cjo3oo6xq6ppo" path="res://game-elements/shaders/celshader.gdshader" id="2_rqa58"]
+[ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="3_bva0l"]
+[ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="4_5oegf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_om75w"]
+size = Vector3(5, 3, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xu15f"]
+render_priority = 0
+shader = ExtResource("1_dw2qa")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_akf43"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_xu15f")
+shader = ExtResource("2_rqa58")
+shader_parameter/albedo = Color(0.8980392, 0, 0.23921569, 1)
+shader_parameter/color_gradient = ExtResource("3_bva0l")
+shader_parameter/fresnel_gradient = ExtResource("4_5oegf")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iqklc"]
+points = PackedVector3Array(2.5, 1.5, 0.5, 2.5, 1.5, -0.5, -2.5, 1.5, 0.5, 2.5, -1.5, 0.5, 2.5, -1.5, -0.5, -2.5, 1.5, -0.5, -2.5, -1.5, 0.5, -2.5, -1.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dw2qa"]
+size = Vector3(5.688965, 3.6035156, 2.3815155)
+
+[node name="Barrier" type="MeshInstance3D" unique_id=704768948]
+mesh = SubResource("BoxMesh_om75w")
+surface_material_override/0 = SubResource("ShaderMaterial_akf43")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1553292051]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1008479798]
+shape = SubResource("ConvexPolygonShape3D_iqklc")
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=1148839746]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=1736659856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026611328, -0.0029296875, 0.06757355)
+shape = SubResource("BoxShape3D_dw2qa")
