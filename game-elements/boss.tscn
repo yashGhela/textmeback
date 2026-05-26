@@ -4,6 +4,8 @@
 [ext_resource type="Shader" uid="uid://cjo3oo6xq6ppo" path="res://game-elements/shaders/celshader.gdshader" id="1_x4uom"]
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="2_mn5np"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="3_6khgh"]
+[ext_resource type="Script" uid="uid://xk4k8rqkhsgc" path="res://scripts/statemachine.gd" id="5_6khgh"]
+[ext_resource type="Script" uid="uid://dd0t76g04wuo" path="res://scripts/state.gd" id="6_0fyb0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oba0a"]
 
@@ -26,3 +28,26 @@ surface_material_override/0 = SubResource("ShaderMaterial_0fyb0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1902414916]
 shape = SubResource("ConvexPolygonShape3D_oba0a")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1883649453]
+script = ExtResource("5_6khgh")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1245670707]
+script = ExtResource("6_0fyb0")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="FollowPath" type="Node" parent="StateMachine" unique_id=709931413]
+script = ExtResource("6_0fyb0")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="Pursue" type="Node" parent="StateMachine" unique_id=1256693281]
+script = ExtResource("6_0fyb0")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="Inspect" type="Node" parent="StateMachine" unique_id=829539511]
+script = ExtResource("6_0fyb0")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="Found" type="Node" parent="StateMachine" unique_id=295519168]
+script = ExtResource("6_0fyb0")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
