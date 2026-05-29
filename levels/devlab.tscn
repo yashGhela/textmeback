@@ -68,7 +68,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5754342, 1.1197305, 0)
 curve = SubResource("Curve3D_w7w6m")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=447972883]
-transform = Transform3D(-0.9999982, 0, -8.7422634e-08, 0, 0.99999917, 0, 8.742262e-08, 0, -0.9999984, 0, 0, 0)
+transform = Transform3D(0.9999982, 0, 0, 0, 0.99999917, 0, 0, 0, 0.9999984, 0, 0, 0)
+rotation_mode = 0
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow") instance=ExtResource("5_eqxup")]
 pathFollow = NodePath("..")
