@@ -1,15 +1,17 @@
 extends Node3D
 
-@export var wifiScript:Dictionary
+
+@export var text_key=""
 var active_area =false
-@onready var textpopup: CanvasLayer = $textpopup
+
 @export var zonename:="None"
 
 
 func _input(event):
 	if active_area and event.is_action_pressed("interact"):
 		print("Interacting with wifi point")
-		textpopup.visible=true;
+		
+		Signalbus.emit_signal("display_texts", text_key)
 		Signalbus.emit_signal("wififound",zonename)
 
 

@@ -8,6 +8,7 @@
 script = ExtResource("1_ahrci")
 
 [node name="textmsgportal" type="TextureRect" parent="." unique_id=1420908131]
+visible = false
 offset_left = 297.0
 offset_top = 80.0
 offset_right = 883.0
