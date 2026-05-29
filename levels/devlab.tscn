@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="2_3xhu2"]
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="3_r31pu"]
 [ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="4_w7w6m"]
+[ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="5_eqxup"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnn2g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,8 +27,8 @@ points = PackedVector3Array(10.158731, 0.61111104, 10.154754, -10.158731, -0.658
 
 [sub_resource type="Curve3D" id="Curve3D_w7w6m"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0.495, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, -199, 0, 5, 0, 0, 0, 5, 0, 5),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0.495, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 5, 0, 5),
+"tilts": PackedFloat32Array(0, -0.83775806, 0)
 }
 point_count = 3
 
@@ -65,3 +66,8 @@ scene_text_file = "res://json/testfile.json"
 [node name="Path3D" type="Path3D" parent="." unique_id=190741013]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5754342, 1.1197305, 0)
 curve = SubResource("Curve3D_w7w6m")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=447972883]
+transform = Transform3D(-0.9999994, 0, -8.742273e-08, 0, 1, 0, 8.742273e-08, 0, -0.9999994, 0, 0, 0)
+
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 instance=ExtResource("5_eqxup")]
