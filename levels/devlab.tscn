@@ -71,5 +71,6 @@ curve = SubResource("Curve3D_w7w6m")
 transform = Transform3D(0.9999982, 0, 0, 0, 0.99999917, 0, 0, 0, 0.9999984, 0, 0, 0)
 rotation_mode = 0
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow") instance=ExtResource("5_eqxup")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path") instance=ExtResource("5_eqxup")]
 pathFollow = NodePath("..")
+path = NodePath("../..")
