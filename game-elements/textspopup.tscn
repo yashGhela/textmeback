@@ -8,7 +8,6 @@
 script = ExtResource("1_ahrci")
 
 [node name="textmsgportal" type="TextureRect" parent="." unique_id=1420908131]
-visible = false
 offset_left = 297.0
 offset_top = 80.0
 offset_right = 883.0
@@ -17,19 +16,37 @@ texture = SubResource("CanvasTexture_2vkv1")
 metadata/_edit_use_anchors_ = true
 
 [node name="senderlabel" type="Label" parent="textmsgportal" unique_id=1914143555]
+z_index = 1
 layout_mode = 0
-offset_left = 100.0
-offset_top = 187.0
-offset_right = 471.0
-offset_bottom = 210.0
+offset_left = 93.0
+offset_top = 163.0
+offset_right = 464.0
+offset_bottom = 186.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Text message here."
 
 [node name="receiverlabel" type="Label" parent="textmsgportal" unique_id=1020638777]
+z_index = 1
 layout_mode = 0
-offset_left = 314.0
-offset_top = 278.0
-offset_right = 685.0
-offset_bottom = 301.0
+offset_left = 313.0
+offset_top = 262.0
+offset_right = 541.0
+offset_bottom = 333.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Text message here."
+
+[node name="senderRect" type="ColorRect" parent="textmsgportal" unique_id=603572654]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 154.0
+offset_right = 321.0
+offset_bottom = 225.0
+color = Color(0.7792914, 0.7792914, 0.7792913, 1)
+
+[node name="senderRect2" type="ColorRect" parent="textmsgportal" unique_id=459519348]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 254.0
+offset_right = 553.0
+offset_bottom = 325.0
+color = Color(0.2741708, 0.5308805, 0.81217855, 1)
