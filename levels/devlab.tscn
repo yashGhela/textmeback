@@ -24,6 +24,13 @@ size = Vector3(20, 1, 20)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_stvgd"]
 points = PackedVector3Array(10.158731, 0.61111104, 10.154754, -10.158731, -0.65873015, -10.154754, -10.158731, -0.65873015, 10.154754, -10.158731, 0.61111104, -10.154754, 10.158731, -0.65873015, -10.154754, -10.158731, 0.61111104, 10.154754, 10.158731, -0.65873015, 10.154754, 10.158731, 0.61111104, -10.154754)
 
+[sub_resource type="Curve3D" id="Curve3D_w7w6m"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0.495, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, -199, 0, 5, 0, 0, 0, 5, 0, 5),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
 [node name="devlab" type="Node3D" unique_id=1026591460]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2006678492]
@@ -54,3 +61,7 @@ text_key = "T1"
 
 [node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("4_w7w6m")]
 scene_text_file = "res://json/testfile.json"
+
+[node name="Path3D" type="Path3D" parent="." unique_id=190741013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5754342, 1.1197305, 0)
+curve = SubResource("Curve3D_w7w6m")
