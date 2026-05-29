@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c6f3jondvu7h8"]
 
+[ext_resource type="Script" uid="uid://cdgpyfcw83lxp" path="res://scripts/textspopup.gd" id="1_ahrci"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_2vkv1"]
 
 [node name="textspopup" type="CanvasLayer" unique_id=618903319]
+script = ExtResource("1_ahrci")
 
 [node name="textmsgportal" type="TextureRect" parent="." unique_id=1420908131]
 offset_left = 297.0
@@ -10,6 +13,7 @@ offset_top = 80.0
 offset_right = 883.0
 offset_bottom = 537.0
 texture = SubResource("CanvasTexture_2vkv1")
+metadata/_edit_use_anchors_ = true
 
 [node name="senderlabel" type="Label" parent="textmsgportal" unique_id=1914143555]
 layout_mode = 0

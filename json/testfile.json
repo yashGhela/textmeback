@@ -1,9 +1,8 @@
 {
-    "Test":{
-        "texts":[
-            {"sender":"P","content":"Heyyyy, you alright?"},
-            {"sender":"G", "content":"Hiii :3, im gnu?"}
+	"Test":[
+		
+		{"sender":"P","content":"Heyyyy, you alright?"},
+		{"sender":"G", "content":"Hiii :3, im gnu?"}
 
-        ]
-    }
+	]
 }

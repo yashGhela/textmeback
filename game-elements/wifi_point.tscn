@@ -10,8 +10,6 @@ albedo_color = Color(0.44313726, 1, 0.43529412, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_rrhkb"]
 radius = 1.448698
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_egy3p"]
-
 [node name="WifiPoint" type="Node3D" unique_id=9886394]
 script = ExtResource("1_kj2bu")
 
@@ -23,25 +21,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0xara")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionZone" unique_id=127663439]
 shape = SubResource("SphereShape3D_rrhkb")
-
-[node name="textpopup" type="CanvasLayer" parent="." unique_id=1428757484]
-visible = false
-
-[node name="textmsgportal" type="TextureRect" parent="textpopup" unique_id=796372713]
-offset_left = 297.0
-offset_top = 80.0
-offset_right = 883.0
-offset_bottom = 537.0
-texture = SubResource("CanvasTexture_egy3p")
-
-[node name="textmsglabel" type="Label" parent="textpopup/textmsgportal" unique_id=966555533]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 187.0
-offset_right = 471.0
-offset_bottom = 210.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Text message here."
 
 [connection signal="area_entered" from="InteractionZone" to="." method="_on_interaction_zone_area_entered"]
 [connection signal="area_exited" from="InteractionZone" to="." method="_on_interaction_zone_area_exited"]
