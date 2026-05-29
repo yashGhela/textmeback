@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="3_6khgh"]
 [ext_resource type="Script" uid="uid://xk4k8rqkhsgc" path="res://scripts/statemachine.gd" id="5_6khgh"]
 [ext_resource type="Script" uid="uid://dd0t76g04wuo" path="res://scripts/state.gd" id="6_0fyb0"]
+[ext_resource type="Script" uid="uid://cll00xw6apn3x" path="res://scripts/follow_path.gd" id="7_gwceh"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oba0a"]
 
@@ -29,15 +30,17 @@ surface_material_override/0 = SubResource("ShaderMaterial_0fyb0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1902414916]
 shape = SubResource("ConvexPolygonShape3D_oba0a")
 
-[node name="StateMachine" type="Node" parent="." unique_id=1883649453]
+[node name="StateMachine" type="Node" parent="." unique_id=1883649453 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("5_6khgh")
+initial_state = NodePath("FollowPath")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1245670707]
 script = ExtResource("6_0fyb0")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
-[node name="FollowPath" type="Node" parent="StateMachine" unique_id=709931413]
-script = ExtResource("6_0fyb0")
+[node name="FollowPath" type="Node" parent="StateMachine" unique_id=709931413 node_paths=PackedStringArray("boss")]
+script = ExtResource("7_gwceh")
+boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="Pursue" type="Node" parent="StateMachine" unique_id=1256693281]
