@@ -9,6 +9,8 @@ var selected_text: Array = []
 var in_progress: bool = false
 @onready var senderlabel: Label = $textmsgportal/senderlabel
 @onready var receiverlabel: Label = $textmsgportal/receiverlabel
+@onready var reciever_rect: ColorRect = $textmsgportal/recieverRect
+@onready var sender_rect: ColorRect = $textmsgportal/senderRect
 
 
 #we are testing changes here
@@ -31,8 +33,12 @@ func show_text():
 	match current_text.sender:
 		"P":
 			senderlabel.text= current_text.content
+			senderlabel.visible=true
+			sender_rect.visible=true
 		"G":
 			receiverlabel.text= current_text.content
+			receiverlabel.visible=true
+			reciever_rect.visible=true
 
 func next_line():
 	if selected_text.size() > 0:
