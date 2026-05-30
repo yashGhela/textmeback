@@ -1,15 +1,19 @@
 extends State
 
 @export var boss:CharacterBody3D
+var direction =1.0
 
-func physics_update(delta:float):
-	var totalPathlength = boss.path.curve.get_baked_length()
-	print(totalPathlength)
-	print(boss.pathFollow.progress_ratio)
-	var direction =1.0
-	if boss.pathFollow.progress>=totalPathlength:
+
+func update(delta:float):
+	#var totalPathlength = boss.path.curve.get_baked_length()
+	#print(totalPathlength)
+	#print(boss.pathFollow.progress_ratio)
+	#
+	if boss.pathFollow.progress_ratio>=0.99:
 		direction=-1.0
-	else:
+	elif boss.pathFollow.progress_ratio<=0.01: 
 		direction=1.0
-	boss.pathFollow.progress+=(2.0*delta)*direction
+	
+	boss.pathFollow.progress+=2.0*delta*direction
+	
 	
