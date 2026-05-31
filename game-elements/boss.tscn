@@ -26,8 +26,9 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kiwkw"]
 height = 3.2856445
 
-[node name="Boss" type="CharacterBody3D" unique_id=150727419]
+[node name="Boss" type="CharacterBody3D" unique_id=150727419 node_paths=PackedStringArray("chase")]
 script = ExtResource("1_mn5np")
+chase = NodePath("StateMachine/Chase")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1971257450]
 mesh = SubResource("CapsuleMesh_oba0a")
@@ -73,3 +74,6 @@ metadata/_custom_type_script = "uid://dd0t76g04wuo"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="seekzone" unique_id=1645848901]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 2)
 shape = SubResource("CylinderShape3D_kiwkw")
+
+[connection signal="area_entered" from="seekzone" to="." method="_on_seekzone_area_entered"]
+[connection signal="area_exited" from="seekzone" to="." method="_on_seekzone_area_exited"]
