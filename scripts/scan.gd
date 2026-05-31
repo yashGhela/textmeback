@@ -17,5 +17,7 @@ func enter():
 	tween.tween_property(boss, "rotation_degrees:y", 45, 2.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	get_tree().create_timer(3.0).timeout.connect(func():
+		if boss.pathFollow:
+			boss.pathFollow.progress = 0
 		
 		Transitioned.emit(self,"FollowPath"))

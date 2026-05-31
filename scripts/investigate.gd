@@ -11,7 +11,7 @@ func physics_update(_delta:float):
 	
 	var disttoloc= boss.global_position.distance_to(location)
 	
-	if disttoloc<1.0:
+	if disttoloc<=4.0:
 		boss.velocity=Vector3.ZERO
 		Transitioned.emit(self,"Scan")
 		return
