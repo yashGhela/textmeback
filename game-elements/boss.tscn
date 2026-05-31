@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="2_mn5np"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="3_6khgh"]
 [ext_resource type="Script" uid="uid://xk4k8rqkhsgc" path="res://scripts/statemachine.gd" id="5_6khgh"]
-[ext_resource type="Script" uid="uid://dd0t76g04wuo" path="res://scripts/state.gd" id="6_0fyb0"]
 [ext_resource type="Script" uid="uid://cll00xw6apn3x" path="res://scripts/follow_path.gd" id="7_gwceh"]
 [ext_resource type="Script" uid="uid://bbbypqko0t06p" path="res://scripts/investigate.gd" id="7_kiwkw"]
 [ext_resource type="Script" uid="uid://c8d63kj83tbfb" path="res://scripts/chase.gd" id="8_bjyle"]
+[ext_resource type="Script" uid="uid://dvoanwohejlsg" path="res://scripts/find.gd" id="9_bjyle"]
 [ext_resource type="Script" uid="uid://v5pbmwsgb5nf" path="res://scripts/scan.gd" id="9_uxrab"]
 [ext_resource type="Script" uid="uid://b3bm46bjfrklg" path="res://scripts/return_to_path_start.gd" id="10_1k661"]
 
@@ -52,12 +52,13 @@ script = ExtResource("7_kiwkw")
 boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
-[node name="Chase" type="Node" parent="StateMachine" unique_id=573927173]
+[node name="Chase" type="Node" parent="StateMachine" unique_id=573927173 node_paths=PackedStringArray("boss")]
 script = ExtResource("8_bjyle")
+boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="Find" type="Node" parent="StateMachine" unique_id=899880748]
-script = ExtResource("6_0fyb0")
+script = ExtResource("9_bjyle")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="Scan" type="Node" parent="StateMachine" unique_id=862630858 node_paths=PackedStringArray("boss")]
