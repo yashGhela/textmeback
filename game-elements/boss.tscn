@@ -57,8 +57,9 @@ metadata/_custom_type_script = "uid://dd0t76g04wuo"
 script = ExtResource("6_0fyb0")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
-[node name="Scan" type="Node" parent="StateMachine" unique_id=862630858]
+[node name="Scan" type="Node" parent="StateMachine" unique_id=862630858 node_paths=PackedStringArray("boss")]
 script = ExtResource("9_uxrab")
+boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="seekzone" type="Area3D" parent="." unique_id=2118083472]
