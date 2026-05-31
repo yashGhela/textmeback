@@ -11,7 +11,7 @@ func _input(event):
 	if active_area and event.is_action_pressed("interact") and is_interactable:
 		print("Interacting")
 		animation_player.play("shake")
-		Signalbus.emit_signal("shakeShelf",location)
+		Signalbus.emit_signal("shakeShelf",global_position)
 
 
 func _on_area_entered(area: Area3D) -> void:
