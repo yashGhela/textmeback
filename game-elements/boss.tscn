@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cll00xw6apn3x" path="res://scripts/follow_path.gd" id="7_gwceh"]
 [ext_resource type="Script" uid="uid://bbbypqko0t06p" path="res://scripts/investigate.gd" id="7_kiwkw"]
 [ext_resource type="Script" uid="uid://v5pbmwsgb5nf" path="res://scripts/scan.gd" id="9_uxrab"]
+[ext_resource type="Script" uid="uid://b3bm46bjfrklg" path="res://scripts/return_to_path_start.gd" id="10_1k661"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oba0a"]
 
@@ -59,6 +60,11 @@ metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="Scan" type="Node" parent="StateMachine" unique_id=862630858 node_paths=PackedStringArray("boss")]
 script = ExtResource("9_uxrab")
+boss = NodePath("../..")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="ReturnToPathStart" type="Node" parent="StateMachine" unique_id=133891193 node_paths=PackedStringArray("boss")]
+script = ExtResource("10_1k661")
 boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
