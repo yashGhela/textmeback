@@ -25,8 +25,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_seekzone_area_entered(area: Area3D) -> void:
-	state_machine.current_state=chase 
+	print(area)
+	if area.is_in_group("Player"):
+		state_machine.current_state=chase 
+
 
 
 func _on_closezone_area_entered(area: Area3D) -> void:
-	state_machine.current_state=chase 
+	if area.is_in_group("Player"):
+		state_machine.current_state=chase 

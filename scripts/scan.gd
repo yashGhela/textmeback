@@ -11,6 +11,7 @@ var time := 0.0
 
 func enter():
 	print("scaning")
+	boss.velocity= Vector3.ZERO
 	var tween = create_tween()
 	tween.set_loops()  # Infinite loop
 	tween.tween_property(boss, "rotation_degrees:y", -45, 2.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
