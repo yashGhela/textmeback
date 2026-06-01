@@ -1,7 +1,15 @@
 extends Node
 
 @export var initial_state :State;
-@export var current_state:State;
+@export var current_state: State:
+	set(value):
+		if current_state == value:
+			return
+		if current_state:
+			current_state.exit()
+		current_state = value
+		if current_state:
+			current_state.enter()
 
 var states:Dictionary={}
 
@@ -11,7 +19,6 @@ func _ready() -> void:
 			states[child.name.to_lower()]=child
 			child.Transitioned.connect(on_child_transitioned)
 	if initial_state:
-		initial_state.enter()
 		current_state=initial_state
 
 func _process(delta: float) -> void:

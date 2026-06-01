@@ -17,6 +17,16 @@ func enter():
 	else:
 		print("Player found")
 
+#func enter():
+	#print("Enter chase")
+	#player =get_tree().get_first_node_in_group("Player")
+	#
+	#if player == null:
+		#push_error("No Player in group 'Player")
+		#return
+	#else:
+		#print("Player found")
+
 
 func physics_update(_delta:float):
 	print("chasing")
