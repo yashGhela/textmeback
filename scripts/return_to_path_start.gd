@@ -7,10 +7,12 @@ func enter():
 
 func physics_update(_delta:float):
 	var location =boss.pathStart.global_position
+	boss.nav_agent.target_position = location
+	
 	
 	var disttoloc= boss.global_position.distance_to(location)
 	
-	if disttoloc<=0.5:
+	if boss.nav_agent.is_navigation_finished():
 		boss.velocity= Vector3.ZERO
 		if boss.pathFollow:
 			boss.pathFollow.progress = 0
@@ -18,7 +20,7 @@ func physics_update(_delta:float):
 		Transitioned.emit(self,"FollowPath")
 		return
 		
-	
+	var next_position = boss.nav_agent.get_next_path_position()
 	var dir = boss.global_position.direction_to(location)
 		
 	boss.velocity=dir*3.0
