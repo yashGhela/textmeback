@@ -28,8 +28,10 @@ _data = {
 point_count = 3
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_eqxup"]
-vertices = PackedVector3Array(-9.658731, 1.0912699, 3.8452463, -5.4087315, 1.0912699, 4.0952463, -1.4087315, 1.0912699, 4.0952463, -1.1587315, 1.0912699, -9.654754, -9.658731, 1.0912699, -9.654754, 0.34126854, 1.0912699, 6.0952463, -1.4087315, 1.0912699, 6.3452463, -1.1587315, 1.0912699, 9.595246, 9.591269, 1.0912699, 9.595246, 0.34126854, 1.0912699, 4.3452463, 9.591269, 1.0912699, -9.654754, -5.9087315, 1.0912699, 4.3452463, -5.6587315, 1.0912699, 6.3452463, -9.658731, 1.0912699, 9.595246)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(3, 10, 9), PackedInt32Array(9, 10, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(9, 2, 3), PackedInt32Array(0, 1, 11), PackedInt32Array(11, 12, 0), PackedInt32Array(0, 12, 13), PackedInt32Array(6, 7, 12), PackedInt32Array(12, 7, 13)]
+vertices = PackedVector3Array(0.34126854, 1.0912699, 5.8452463, 0.34126854, 1.0912699, 9.845246, 9.841269, 1.0912699, 9.845246, -0.15873146, 1.0912699, 3.8452463, -9.658731, 1.0912699, -9.654754, -9.658731, 1.0912699, 3.8452463, -5.6587315, 1.0912699, 3.8452463, 9.841269, 1.0912699, -9.654754, -5.6587315, 1.0912699, 6.3452463, -9.658731, 1.0912699, 9.845246)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(3, 6, 4), PackedInt32Array(2, 3, 7), PackedInt32Array(7, 3, 4), PackedInt32Array(6, 8, 5), PackedInt32Array(5, 8, 9), PackedInt32Array(0, 1, 8), PackedInt32Array(8, 1, 9)]
+cell_size = 0.5
+border_size = 0.25
 agent_height = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_uf07q"]
@@ -78,7 +80,7 @@ pathStart = NodePath("../../PathStart")
 navigation_mesh = SubResource("NavigationMesh_eqxup")
 
 [node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.9842508, 5.27178)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.9842508, 5.1741805)
 Player = NodePath("../../Player")
 
 [node name="floor" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1527622563]

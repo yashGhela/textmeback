@@ -34,7 +34,7 @@ func physics_update(_delta:float):
 	
 	var distance = boss.global_position.distance_to(player.global_position)
 	
-	if distance > 4.0:
+	if distance > 7.0:
 		Transitioned.emit(self, "Scan")
 		return
 	
