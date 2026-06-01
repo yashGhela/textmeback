@@ -11,6 +11,9 @@ func enter():
 	
 	if player == null:
 		push_error("No Player in group 'Player")
+		return
+	else:
+		print("Player found")
 
 
 func physics_update(_delta:float):
