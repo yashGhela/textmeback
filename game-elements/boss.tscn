@@ -42,7 +42,7 @@ shape = SubResource("ConvexPolygonShape3D_oba0a")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1883649453 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("5_6khgh")
-initial_state = NodePath("FollowPath")
+initial_state = NodePath("Chase")
 
 [node name="FollowPath" type="Node" parent="StateMachine" unique_id=709931413 node_paths=PackedStringArray("boss")]
 script = ExtResource("7_gwceh")
@@ -84,7 +84,7 @@ shape = SubResource("CylinderShape3D_kiwkw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closezone" unique_id=2041151364]
 shape = SubResource("SphereShape3D_bjyle")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1183077532]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1183077532 groups=["Boss"]]
 
 [connection signal="area_entered" from="seekzone" to="." method="_on_seekzone_area_entered"]
 [connection signal="area_exited" from="seekzone" to="." method="_on_seekzone_area_exited"]

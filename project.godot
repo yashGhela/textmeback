@@ -21,6 +21,7 @@ Signalbus="*uid://bbqngs0rr1kau"
 [global_group]
 
 Player=""
+Boss=""
 
 [input]
 

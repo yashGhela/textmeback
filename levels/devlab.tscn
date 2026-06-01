@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://p7jh47ljc7oj"]
 
 [ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="1_hnn2g"]
+[ext_resource type="Script" uid="uid://cn3dg60cx8khu" path="res://scripts/world.gd" id="1_xu15f"]
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="2_3xhu2"]
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="3_r31pu"]
 [ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="4_w7w6m"]
@@ -38,6 +39,7 @@ size = Vector3(20, 1, 20)
 points = PackedVector3Array(10.158731, 0.61111104, 10.154754, -10.158731, -0.65873015, -10.154754, -10.158731, -0.65873015, 10.154754, -10.158731, 0.61111104, -10.154754, 10.158731, -0.65873015, -10.154754, -10.158731, 0.61111104, 10.154754, 10.158731, -0.65873015, 10.154754, 10.158731, 0.61111104, -10.154754)
 
 [node name="devlab" type="Node3D" unique_id=1026591460]
+script = ExtResource("1_xu15f")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2006678492]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -67,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.495)
 transform = Transform3D(0.9999982, 0, 0, 0, 0.99999917, 0, 0, 0, 0.9999984, 0, 0, 0)
 rotation_mode = 0
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("5_eqxup")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("5_eqxup")]
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")

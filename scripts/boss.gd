@@ -13,6 +13,9 @@ extends CharacterBody3D
 @onready var scan: Node = $StateMachine/Scan
 
 
+func update_target_location(target_location):
+	nav_agent.target_position=target_location
+
 func _ready() -> void:
 	Signalbus.connect("shakeShelf",Callable(self,"on_shake_shelf"))
 
