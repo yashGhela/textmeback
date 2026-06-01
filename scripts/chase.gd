@@ -31,6 +31,10 @@ func physics_update(_delta:float):
 		Transitioned.emit(self, "Scan")
 		return
 	
+	if distance<1.0:
+		Transitioned.emit(self,"Find")
+		return
+	
 	var direction = (player.global_position - boss.global_position).normalized()
 	direction.y = 0
 	

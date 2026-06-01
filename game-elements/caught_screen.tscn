@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://y2t81fwvojvq"]
+
+[ext_resource type="Script" uid="uid://cgr1b31tskhnl" path="res://scripts/caught_screen.gd" id="1_taaat"]
+
+[node name="CaughtScreen" type="Control" unique_id=1357129286]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_taaat")
+
+[node name="Label" type="Label" parent="." unique_id=1790627313]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 236.0
+offset_right = 660.0
+offset_bottom = 263.0
+text = "YOU HAVE BEEN CAUGHT !"
+
+[node name="Button" type="Button" parent="." unique_id=1358272910]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 287.0
+offset_right = 538.0
+offset_bottom = 318.0
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
