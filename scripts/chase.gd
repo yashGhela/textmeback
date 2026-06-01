@@ -30,7 +30,7 @@ func physics_update(_delta:float):
 	var current_location = boss.global_transform.origin
 	var next_location = boss.nav_agent.get_next_path_position()
 	var new_velocity = (next_location-current_location).normalized() * move_speed	
-	boss.velocity= new_velocity
+	boss.velocity= new_velocity.move_toward(new_velocity,.25)
 	
 	var distance = boss.global_position.distance_to(player.global_position)
 	

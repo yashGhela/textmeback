@@ -85,6 +85,7 @@ shape = SubResource("CylinderShape3D_kiwkw")
 shape = SubResource("SphereShape3D_bjyle")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1183077532 groups=["Boss"]]
+path_height_offset = 0.1
 
 [connection signal="area_entered" from="seekzone" to="." method="_on_seekzone_area_entered"]
 [connection signal="area_exited" from="seekzone" to="." method="_on_seekzone_area_exited"]
