@@ -17,16 +17,23 @@ func enter():
 
 
 func physics_update(_delta:float):
-	var direction = (player.global_position - boss.global_position).normalized()
 	
-	direction.y=0
+	if player == null:
+		Transitioned.emit(self, "Scan")
+		return
+	var distance = boss.global_position.distance_to(player.global_position)
+	
+	if distance > 10.0:
+		Transitioned.emit(self, "Scan")
+		return
+	
+	var direction = (player.global_position - boss.global_position).normalized()
+	direction.y = 0
 	
 	if direction.length() > 0.01:
-		boss.look_at(boss.global_position - direction, Vector3.UP)
-		boss.velocity = direction.normalized() * move_speed
-	
-	
-		
-	if direction.length()>10:
-		Transitioned.emit(self,"Scan")
+		# Look at player's position
+		boss.look_at(player.global_position, Vector3.UP)
+		boss.velocity = direction * move_speed
+	else:
+		boss.velocity = Vector3.ZERO
 		
