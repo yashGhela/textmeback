@@ -26,7 +26,3 @@ func _physics_process(delta: float) -> void:
 
 func _on_seekzone_area_entered(area: Area3D) -> void:
 	state_machine.current_state=chase # Replace with function body.
-
-
-func _on_seekzone_area_exited(area: Area3D) -> void:
-	state_machine.current_state=scan # Replace with function body.

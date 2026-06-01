@@ -17,15 +17,7 @@ func enter():
 	else:
 		print("Player found")
 
-#func enter():
-	#print("Enter chase")
-	#player =get_tree().get_first_node_in_group("Player")
-	#
-	#if player == null:
-		#push_error("No Player in group 'Player")
-		#return
-	#else:
-		#print("Player found")
+
 
 
 func physics_update(_delta:float):
@@ -35,7 +27,7 @@ func physics_update(_delta:float):
 		return
 	var distance = boss.global_position.distance_to(player.global_position)
 	
-	if distance > 10.0:
+	if distance > 4.0:
 		Transitioned.emit(self, "Scan")
 		return
 	
