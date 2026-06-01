@@ -6,7 +6,9 @@ extends CharacterBody3D
 @onready var state_machine: Node = $StateMachine
 @onready var investigate: Node = $StateMachine/Investigate
 @export var pathStart:Node3D
-@onready var chase: State
+@onready var chase: Node = $StateMachine/Chase
+
+@onready var scan: Node = $StateMachine/Scan
 
 
 func _ready() -> void:
@@ -23,9 +25,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_seekzone_area_entered(area: Area3D) -> void:
-	pass
-	#state_machine.current_state=chase # Replace with function body.
+	state_machine.current_state=chase # Replace with function body.
 
 
 func _on_seekzone_area_exited(area: Area3D) -> void:
-	pass # Replace with function body.
+	state_machine.current_state=scan # Replace with function body.
