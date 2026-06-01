@@ -4,6 +4,10 @@ extends State
 var direction =1.0
 
 
+func enter():
+	print("Following path")
+
+
 func update(delta:float):
 	#var totalPathlength = boss.path.curve.get_baked_length()
 	#print(totalPathlength)

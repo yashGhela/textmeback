@@ -2,6 +2,9 @@ extends State
 
 @export var boss:CharacterBody3D
 
+func enter():
+	print("Returning to path start")
+
 func physics_update(_delta:float):
 	var location =boss.pathStart.global_position
 	

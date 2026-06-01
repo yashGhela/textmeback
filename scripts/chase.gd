@@ -21,12 +21,12 @@ func physics_update(_delta:float):
 	if direction.length() > 0.01:
 		boss.look_at(boss.global_position - direction, Vector3.UP)
 	
-	if direction.length()<10:
-		if direction.length()<3:
-			Transitioned.emit(self,"Find")
-			
-		else:
-			boss.velocity = direction.normalized() * move_speed
+	#if direction.length()<10:
+		#if direction.length()<3:
+			#Transitioned.emit(self,"Find")
+			#
+		#else:
+		boss.velocity = direction.normalized() * move_speed
 	
 	else:
 		boss.velocity = Vector3.ZERO
