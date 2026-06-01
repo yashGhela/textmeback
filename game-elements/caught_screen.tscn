@@ -13,18 +13,18 @@ script = ExtResource("1_taaat")
 
 [node name="Label" type="Label" parent="." unique_id=1790627313]
 layout_mode = 0
-offset_left = 402.0
-offset_top = 236.0
-offset_right = 660.0
-offset_bottom = 263.0
+offset_left = 466.0
+offset_top = 278.0
+offset_right = 724.0
+offset_bottom = 305.0
 text = "YOU HAVE BEEN CAUGHT !"
 
 [node name="Button" type="Button" parent="." unique_id=1358272910]
 layout_mode = 0
-offset_left = 473.0
-offset_top = 287.0
-offset_right = 538.0
-offset_bottom = 318.0
+offset_left = 544.0
+offset_top = 339.0
+offset_right = 609.0
+offset_bottom = 370.0
 text = "Restart"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
