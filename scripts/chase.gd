@@ -8,10 +8,13 @@ var player:CharacterBody3D
 func enter():
 	print("Enter chase")
 	player =get_tree().get_first_node_in_group("Player")
+	
+	if player == null:
+		push_error("No Player in group 'Player")
 
 
 func physics_update(_delta:float):
-	var direction = player.global_position - boss.global_position
+	var direction = (player.global_position - boss.global_position).normalized()
 	
 	direction.y=0
 	

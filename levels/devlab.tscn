@@ -49,7 +49,7 @@ mesh = SubResource("BoxMesh_uf07q")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=478840121]
 shape = SubResource("ConvexPolygonShape3D_stvgd")
 
-[node name="Player" parent="." unique_id=642970210 groups=["Player"] instance=ExtResource("1_hnn2g")]
+[node name="Player" parent="." unique_id=642970210 instance=ExtResource("1_hnn2g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.818861, 1.6111116, -2.5348568)
 
 [node name="Barrier" parent="." unique_id=1751531890 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]

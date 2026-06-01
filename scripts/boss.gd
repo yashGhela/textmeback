@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var state_machine: Node = $StateMachine
 @onready var investigate: Node = $StateMachine/Investigate
 @export var pathStart:Node3D
-@export var chase: State
+@onready var chase: State
 
 
 func _ready() -> void:
