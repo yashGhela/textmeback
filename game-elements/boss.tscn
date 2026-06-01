@@ -84,6 +84,8 @@ shape = SubResource("CylinderShape3D_kiwkw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="closezone" unique_id=2041151364]
 shape = SubResource("SphereShape3D_bjyle")
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1183077532]
+
 [connection signal="area_entered" from="seekzone" to="." method="_on_seekzone_area_entered"]
 [connection signal="area_exited" from="seekzone" to="." method="_on_seekzone_area_exited"]
 [connection signal="area_entered" from="closezone" to="." method="_on_closezone_area_entered"]

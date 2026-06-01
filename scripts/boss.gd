@@ -7,6 +7,8 @@ extends CharacterBody3D
 @onready var investigate: Node = $StateMachine/Investigate
 @export var pathStart:Node3D
 @onready var chase: Node = $StateMachine/Chase
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+
 
 @onready var scan: Node = $StateMachine/Scan
 

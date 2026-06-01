@@ -18,10 +18,19 @@ func enter():
 		print("Player found")
 
 
+func update_target_location(target_location):
+	boss.nav_agent.set_target_location(target_location)
 
 
 func physics_update(_delta:float):
+	
+	
 	print("chasing")
+	
+	var current_location = boss.global_transform.origin
+	var next_location = boss.nav_agent.get_next_location()
+	var new_velocity = (next_location-current_location).normalized() * move_speed	
+	boss.velocity= new_velocity
 	if player == null:
 		Transitioned.emit(self, "Scan")
 		return
@@ -41,7 +50,7 @@ func physics_update(_delta:float):
 	if direction.length() > 0.01:
 		# Look at player's position
 		boss.look_at(player.global_position, Vector3.UP)
-		boss.velocity = direction * move_speed
+		#boss.velocity = direction * move_speed
 	else:
 		boss.velocity = Vector3.ZERO
 		
