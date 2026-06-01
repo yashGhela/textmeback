@@ -9,10 +9,7 @@ func enter():
 
 
 func update(delta:float):
-	#var totalPathlength = boss.path.curve.get_baked_length()
-	#print(totalPathlength)
-	#print(boss.pathFollow.progress_ratio)
-	#
+	
 	if boss.pathFollow.progress_ratio>=0.99:
 		direction=-1.0
 	elif boss.pathFollow.progress_ratio<=0.01: 
