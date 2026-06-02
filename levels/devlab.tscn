@@ -79,7 +79,11 @@ pathStart = NodePath("../../PathStart")
 navigation_mesh = SubResource("NavigationMesh_eqxup")
 
 [node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.9842508, 5.1741805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.8384836, 5.1741805)
+Player = NodePath("../../Player")
+
+[node name="Barrier2" parent="NavigationRegion3D" unique_id=1355049661 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -2.7238507, 1.8384836, -0.9503164)
 Player = NodePath("../../Player")
 
 [node name="floor" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1527622563]
