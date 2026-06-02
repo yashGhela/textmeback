@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 8.0
 const JUMP_VELOCITY = 4.5
+@onready var animation_player: AnimationPlayer = $character/AnimationPlayer
 
 
 func _physics_process(delta: float) -> void:
@@ -26,8 +27,10 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		animation_player.play("Armature|mixamo_com_001")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		animation_player.play("Armature|idle")
 
 	move_and_slide()
