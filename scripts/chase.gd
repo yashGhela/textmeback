@@ -4,6 +4,7 @@ extends State
 @export var move_speed:=3.0
 
 var player:CharacterBody3D
+@onready var animation_player: AnimationPlayer = $"../../character/AnimationPlayer"
 
 
 
@@ -48,6 +49,7 @@ func physics_update(_delta:float):
 	if direction.length() > 0.01:
 		# Look at player's position
 		boss.look_at(player.global_position, Vector3.UP)
+		animation_player.play("Armature|mixamo_com_001")
 		#boss.velocity = direction * move_speed
 	else:
 		boss.velocity = Vector3.ZERO
