@@ -50,9 +50,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1583802381]
 environment = SubResource("Environment_r31pu")
 
-[node name="Player" parent="." unique_id=642970210 instance=ExtResource("1_hnn2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.131499, 1.6111116, -4.5901833)
-
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_r31pu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6665146, 1.1111102, -5.1055365)
 text_key = "T1"
@@ -81,11 +78,11 @@ navigation_mesh = SubResource("NavigationMesh_eqxup")
 
 [node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7238507, 1.8384836, 5.1741805)
-Player = NodePath("../../Player")
+Player = NodePath("")
 
 [node name="Barrier2" parent="NavigationRegion3D" unique_id=1355049661 node_paths=PackedStringArray("Player") instance=ExtResource("2_3xhu2")]
 transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -2.7238507, 1.8384836, -0.9503164)
-Player = NodePath("../../Player")
+Player = NodePath("")
 
 [node name="floor" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1527622563]
 mesh = SubResource("BoxMesh_uf07q")
@@ -97,3 +94,6 @@ shape = SubResource("ConvexPolygonShape3D_stvgd")
 
 [node name="tiledfloor" parent="." unique_id=1176899292 instance=ExtResource("7_om75w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4425516, 0.9861117, 0.53904223)
+
+[node name="Player" parent="." unique_id=642970210 instance=ExtResource("1_hnn2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.394165, 1.7527151, -5.3585215)

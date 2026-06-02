@@ -342,11 +342,53 @@ shader_parameter/albedo = Color(0.5057144, 0.20468941, 0.21554956, 1)
 shader_parameter/color_gradient = ExtResource("4_0owfj")
 shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vcpw5"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.77943575, 0.77266365, 0.73333895, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5avv"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.90588236, 0.7137255, 0.5058824, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ih27"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.5058824, 0.20392157, 0.21568628, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n3joc"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.90588236, 0.7137255, 0.5058824, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5bdd2"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.90588236, 0.7137255, 0.5058824, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fhwbq"]
 render_priority = 0
 shader = ExtResource("7_jxgx0")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 shader_parameter/texture_albedo = ExtResource("7_w6y2a")
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_73cyy"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.21983412, 0.33707768, 0.52399683, 1)
 shader_parameter/color_gradient = ExtResource("4_0owfj")
 shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
 
@@ -1271,14 +1313,20 @@ bones/25/rotation = Quaternion(0, 0, 0, 1)
 bones/25/scale = Vector3(1, 1, 1)
 
 [node name="Cylinder" type="MeshInstance3D" parent="character/Armature/Skeleton3D" unique_id=1174954414]
-transform = Transform3D(1, -1.4901161e-08, 9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 1, -3.4528784e-06, -3.080585e-05, 0.000109030865)
+transform = Transform3D(1, -2.9802322e-08, 9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 1, -1.2940494e-05, -4.6398738e-05, 0.00020869821)
 mesh = SubResource("ArrayMesh_k5mn7")
 skin = SubResource("Skin_epqcq")
 skeleton = NodePath("..")
 surface_material_override/0 = SubResource("ShaderMaterial_olv8x")
 surface_material_override/1 = SubResource("ShaderMaterial_bg1hw")
 surface_material_override/2 = SubResource("ShaderMaterial_cwp58")
+surface_material_override/3 = SubResource("ShaderMaterial_vcpw5")
+surface_material_override/4 = SubResource("ShaderMaterial_c5avv")
+surface_material_override/5 = SubResource("ShaderMaterial_8ih27")
+surface_material_override/6 = SubResource("ShaderMaterial_n3joc")
+surface_material_override/7 = SubResource("ShaderMaterial_5bdd2")
 surface_material_override/8 = SubResource("ShaderMaterial_fhwbq")
+surface_material_override/9 = SubResource("ShaderMaterial_73cyy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="character" unique_id=2040703242]
 libraries/ = SubResource("AnimationLibrary_350l6")
