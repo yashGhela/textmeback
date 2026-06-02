@@ -321,6 +321,27 @@ bind/19/name = &"Bone.011_end"
 bind/19/bone = -1
 bind/19/pose = Transform3D(1.4110265e-07, 0.3395468, 1.1641532e-10, 2.4447218e-09, -2.3283064e-10, -0.3395468, -0.3395468, 1.348526e-07, 1.5716068e-09, 1.4142114e-09, -0.0024952244, -0.0044187754)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_olv8x"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.12955844, 0.12955847, 0.12955844, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bg1hw"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.18926868, 0.32043236, 0.5270357, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cwp58"]
+render_priority = 0
+shader = ExtResource("3_6kh4p")
+shader_parameter/albedo = Color(0.5057144, 0.20468941, 0.21554956, 1)
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fhwbq"]
 render_priority = 0
 shader = ExtResource("7_jxgx0")
@@ -1254,6 +1275,9 @@ transform = Transform3D(1, -1.4901161e-08, 9.313226e-10, 0, 1, 0, 9.313226e-10, 
 mesh = SubResource("ArrayMesh_k5mn7")
 skin = SubResource("Skin_epqcq")
 skeleton = NodePath("..")
+surface_material_override/0 = SubResource("ShaderMaterial_olv8x")
+surface_material_override/1 = SubResource("ShaderMaterial_bg1hw")
+surface_material_override/2 = SubResource("ShaderMaterial_cwp58")
 surface_material_override/8 = SubResource("ShaderMaterial_fhwbq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="character" unique_id=2040703242]
