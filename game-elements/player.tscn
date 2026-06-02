@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://cjo3oo6xq6ppo" path="res://game-elements/shaders/celshader.gdshader" id="3_6kh4p"]
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="4_0owfj"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="5_w6y2a"]
+[ext_resource type="Shader" uid="uid://cvelxc5besak3" path="res://game-elements/shaders/imagecelshader.gdshader" id="7_jxgx0"]
 [ext_resource type="Texture2D" uid="uid://cut7yrmmwu621" path="res://assets/blends/face.png" id="7_w6y2a"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
@@ -320,8 +321,13 @@ bind/19/name = &"Bone.011_end"
 bind/19/bone = -1
 bind/19/pose = Transform3D(1.4110265e-07, 0.3395468, 1.1641532e-10, 2.4447218e-09, -2.3283064e-10, -0.3395468, -0.3395468, 1.348526e-07, 1.5716068e-09, 1.4142114e-09, -0.0024952244, -0.0044187754)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxgx0"]
-albedo_texture = ExtResource("7_w6y2a")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhwbq"]
+render_priority = 0
+shader = ExtResource("7_jxgx0")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+shader_parameter/texture_albedo = ExtResource("7_w6y2a")
+shader_parameter/color_gradient = ExtResource("4_0owfj")
+shader_parameter/fresnel_gradient = ExtResource("5_w6y2a")
 
 [sub_resource type="Animation" id="Animation_p8d2h"]
 resource_name = "Armature|Armature|idle"
@@ -1244,10 +1250,11 @@ bones/25/rotation = Quaternion(0, 0, 0, 1)
 bones/25/scale = Vector3(1, 1, 1)
 
 [node name="Cylinder" type="MeshInstance3D" parent="character/Armature/Skeleton3D" unique_id=1174954414]
+transform = Transform3D(1, -1.4901161e-08, 9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 1, -3.4528784e-06, -3.080585e-05, 0.000109030865)
 mesh = SubResource("ArrayMesh_k5mn7")
 skin = SubResource("Skin_epqcq")
 skeleton = NodePath("..")
-surface_material_override/8 = SubResource("StandardMaterial3D_jxgx0")
+surface_material_override/8 = SubResource("ShaderMaterial_fhwbq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="character" unique_id=2040703242]
 libraries/ = SubResource("AnimationLibrary_350l6")
