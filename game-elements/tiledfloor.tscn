@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://clr33j1w2mxtq"]
 
 [ext_resource type="Texture2D" uid="uid://c1m31ydrqdsch" path="res://assets/fbx/floor_0.png" id="1_iwus8"]
-[ext_resource type="Shader" uid="uid://505mpqnvv57c" path="res://game-elements/shaders/outline.gdshader" id="2_a0iti"]
 [ext_resource type="Shader" uid="uid://cvelxc5besak3" path="res://game-elements/shaders/imagecelshader.gdshader" id="3_wonsu"]
 [ext_resource type="Texture2D" uid="uid://cxkahe6u325xi" path="res://game-elements/shaders/colorgradient.tres" id="4_jgigx"]
 [ext_resource type="Texture2D" uid="uid://dmfydmdgl0paw" path="res://game-elements/shaders/fresnelgradient.tres" id="5_y3yne"]
@@ -49,15 +48,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hnej2")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7w0n2"]
-render_priority = 0
-shader = ExtResource("2_a0iti")
-shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/outline_width = 2.0
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kuhly"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_7w0n2")
 shader = ExtResource("3_wonsu")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 shader_parameter/texture_albedo = ExtResource("6_xt3tx")

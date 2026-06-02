@@ -1,11 +1,23 @@
 [gd_scene format=3 uid="uid://cj8rg2108d8iu"]
 
 [ext_resource type="Script" uid="uid://c33lersr4obtf" path="res://scripts/wifi_point.gd" id="1_kj2bu"]
+[ext_resource type="Shader" uid="uid://505mpqnvv57c" path="res://game-elements/shaders/outline.gdshader" id="2_1wlnv"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_1wlnv"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0xara"]
+render_priority = 0
+shader = ExtResource("2_1wlnv")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xara"]
+next_pass = SubResource("ShaderMaterial_0xara")
+transparency = 1
 albedo_color = Color(0.44313726, 1, 0.43529412, 1)
+emission_enabled = true
+emission = Color(0, 0.60784316, 0, 1)
+emission_energy_multiplier = 20.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rrhkb"]
 radius = 1.448698
