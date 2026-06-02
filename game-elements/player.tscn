@@ -1182,7 +1182,7 @@ shape = SubResource("SphereShape3D_0owfj")
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.005, -0.8787254, 0.036)
 
 [node name="Armature" type="Node3D" parent="character" unique_id=278687207]
-transform = Transform3D(-87.06239, 1.3146056e-05, 5.7463236e-13, 0, -3.805618e-06, 87.06239, 1.3146056e-05, 87.06239, 3.805618e-06, 0, 0, -1.4210854e-16)
+transform = Transform3D(-87.06239, 1.3146056e-05, 5.7463236e-13, 0, -3.805618e-06, 87.06239, 1.3146056e-05, 87.06239, 3.805618e-06, 0, 0, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="character/Armature" unique_id=740635757]
 bones/0/name = "Bone"
