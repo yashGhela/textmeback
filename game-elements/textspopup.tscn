@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c6f3jondvu7h8"]
 
 [ext_resource type="Script" uid="uid://cdgpyfcw83lxp" path="res://scripts/textspopup.gd" id="1_ahrci"]
+[ext_resource type="PackedScene" uid="uid://dqoyjxkmej1gv" path="res://game-elements/receiver_container.tscn" id="2_t858o"]
+[ext_resource type="PackedScene" uid="uid://dtkwyc7jag8cx" path="res://game-elements/sender_container.tscn" id="3_55th0"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2vkv1"]
 
@@ -15,30 +17,7 @@ offset_bottom = 537.0
 texture = SubResource("CanvasTexture_2vkv1")
 metadata/_edit_use_anchors_ = true
 
-[node name="senderlabel" type="Label" parent="textmsgportal" unique_id=1914143555]
-visible = false
-z_index = 1
-layout_mode = 0
-offset_left = 93.0
-offset_top = 163.0
-offset_right = 464.0
-offset_bottom = 186.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Text message here."
-
-[node name="receiverlabel" type="Label" parent="textmsgportal" unique_id=1020638777]
-visible = false
-z_index = 1
-layout_mode = 0
-offset_left = 313.0
-offset_top = 262.0
-offset_right = 541.0
-offset_bottom = 333.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Text message here."
-
 [node name="senderRect" type="ColorRect" parent="textmsgportal" unique_id=603572654]
-visible = false
 layout_mode = 0
 offset_left = 78.0
 offset_top = 154.0
@@ -47,10 +26,13 @@ offset_bottom = 225.0
 color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 
 [node name="recieverRect" type="ColorRect" parent="textmsgportal" unique_id=459519348]
-visible = false
 layout_mode = 0
 offset_left = 298.0
 offset_top = 254.0
 offset_right = 553.0
 offset_bottom = 325.0
 color = Color(0.2741708, 0.5308805, 0.81217855, 1)
+
+[node name="receiverContainer" parent="." unique_id=591480758 instance=ExtResource("2_t858o")]
+
+[node name="senderContainer" parent="." unique_id=2002901747 instance=ExtResource("3_55th0")]
