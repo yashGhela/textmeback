@@ -49,9 +49,9 @@ func show_text():
 	message_container.add_child(row) 
 	match current_text.sender:
 		"P":
-			bubble.callNewMessage(current_text.content, 's')
+			bubble.callNewMessage(current_text.content, 's', current_text.delivered)
 		"G":
-			bubble.callNewMessage(current_text.content, 'r')
+			bubble.callNewMessage(current_text.content, 'r', current_text.delivered)
 	 # message_container is your VBoxContainer	
 func next_line():
 	if selected_text.size() > 0:
@@ -61,7 +61,9 @@ func next_line():
 
 func finish():
 	Signalbus.emit_signal("textingover")
-	
+	for child in message_container.get_children():
+		child.queue_free()
+
 	textmsgportal.visible = false
 	in_progress = false
 	
@@ -76,6 +78,9 @@ func on_display_texts(text_key):
 	else:
 		print("This is the text key: ", text_key)
 		
+		for child in message_container.get_children():
+			child.queue_free()
+
 		
 		
 		textmsgportal.visible = true
