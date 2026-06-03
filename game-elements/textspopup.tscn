@@ -2,20 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cdgpyfcw83lxp" path="res://scripts/textspopup.gd" id="1_ahrci"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_2vkv1"]
-
 [node name="textspopup" type="CanvasLayer" unique_id=618903319]
 script = ExtResource("1_ahrci")
 
-[node name="textmsgportal" type="TextureRect" parent="." unique_id=1420908131]
+[node name="textmsgportal" type="ColorRect" parent="." unique_id=904924936]
 offset_left = 297.0
 offset_top = 80.0
 offset_right = 883.0
 offset_bottom = 537.0
-texture = SubResource("CanvasTexture_2vkv1")
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="MarginContainer" type="MarginContainer" parent="textmsgportal" unique_id=7200518]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

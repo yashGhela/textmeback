@@ -5,7 +5,7 @@ extends CanvasLayer
 var scene_text: Dictionary = {}
 var selected_text: Array = []
 @onready var textspopup: CanvasLayer = $"."
-@onready var textmsgportal: TextureRect = $textmsgportal
+@onready var textmsgportal: ColorRect = $textmsgportal
 var in_progress: bool = false
 const textscene = preload("res://game-elements/textcontainer.tscn")
 
@@ -31,14 +31,16 @@ func show_text():
 	for child in textmsgportal.get_children():
 		child.queue_free()
 	
+	
+	textmsgportal.add_child(nextext)
+	
+
 	match current_text.sender:
 		"P":
-			nextext.callNewMessage(current_text.content,'s')
-			textmsgportal.add_child(nextext)
+			nextext.callNewMessage(current_text.content, 's')
 		"G":
-			nextext.callNewMessage(current_text.content,'r')
-			textmsgportal.add_child(nextext)
-
+			nextext.callNewMessage(current_text.content, 'r')
+		
 func next_line():
 	if selected_text.size() > 0:
 		show_text()
