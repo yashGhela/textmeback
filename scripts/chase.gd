@@ -51,9 +51,9 @@ func physics_update(_delta:float):
 		# Look at player's position
 		boss.look_at(player.global_position, Vector3.UP)
 		
-		if character:
-			var target_angle = atan2(direction.x, direction.z)
-			character.rotation.y = lerp_angle(character.rotation.y, target_angle, 8.0 * _delta)
+		#if character:
+			#var target_angle = atan2(direction.x, direction.z)
+			#character.rotation.y = lerp_angle(character.rotation.y, target_angle, 8.0 * _delta)
 		animation_player.play("Armature|mixamo_com_001")
 		#boss.velocity = direction * move_speed
 	else:
