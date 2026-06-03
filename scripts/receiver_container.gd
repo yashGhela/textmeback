@@ -17,7 +17,7 @@ func callNewMessage(text, type):
 	
 	label.text=text
 	if type == 'r':
-		label.add_theme_stylebox_override("reciever", receiverbox)
+		label.add_theme_stylebox_override("normal", receiverbox)
 	elif type=='s':
-		label.add_theme_stylebox_override('sender',senderbox)
+		label.add_theme_stylebox_override('normal',senderbox)
 	#animation_player.play("popuptext")

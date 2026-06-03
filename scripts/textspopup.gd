@@ -8,6 +8,7 @@ var selected_text: Array = []
 @onready var textmsgportal: ColorRect = $textmsgportal
 var in_progress: bool = false
 const textscene = preload("res://game-elements/textcontainer.tscn")
+@onready var message_container: VBoxContainer = $textmsgportal/message_container
 
 #we are testing changes here
 func _ready():
@@ -23,24 +24,35 @@ func load_scene_text():
 		test_json_conv.parse(file.get_as_text())
 		return test_json_conv.get_data()
 		
-
 func show_text():
 	var current_text = selected_text.pop_front()
-	var nextext = textscene.instantiate()
+	var bubble = textscene.instantiate()
 	
-	for child in textmsgportal.get_children():
-		child.queue_free()
+	# Create a row for this message
+	var row = HBoxContainer.new()
+	row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	
+	match current_text.sender:
+		"P":  # sender – bubble on right
+			var spacer = Control.new()
+			spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			row.add_child(spacer)
+			row.add_child(bubble)
+			
+		"G":  # receiver – bubble on left
+			row.add_child(bubble)
+			var spacer = Control.new()
+			spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			row.add_child(spacer)
+			
 	
-	textmsgportal.add_child(nextext)
-	
-
+	message_container.add_child(row) 
 	match current_text.sender:
 		"P":
-			nextext.callNewMessage(current_text.content, 's')
+			bubble.callNewMessage(current_text.content, 's')
 		"G":
-			nextext.callNewMessage(current_text.content, 'r')
-		
+			bubble.callNewMessage(current_text.content, 'r')
+	 # message_container is your VBoxContainer	
 func next_line():
 	if selected_text.size() > 0:
 		show_text()
