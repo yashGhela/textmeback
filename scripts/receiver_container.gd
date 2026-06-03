@@ -15,15 +15,15 @@ var failed = load("res://game-elements/shaders/failed.tres") as StyleBox
 
 func callNewMessage(text, type, delivered):
 	print(text)
-	
+	print("Delivered status: ", delivered)
 	label.text=text
 	if type == 'r':
-		if !delivered:
+		if delivered==false:
 			label.add_theme_stylebox_override('normal',failed)
 			return
 		label.add_theme_stylebox_override("normal", receiverbox)
 	elif type=='s':
-		if !delivered:
+		if delivered==false:
 			label.add_theme_stylebox_override('normal',failed)
 			return
 		label.add_theme_stylebox_override('normal',senderbox)

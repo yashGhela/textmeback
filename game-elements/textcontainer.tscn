@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://lrtesnjir717" path="res://scripts/receiver_container.gd" id="1_p1y6d"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_us6bg"]
+
 [node name="textContainer" type="PanelContainer" unique_id=591480758]
 z_index = 10
 offset_right = 454.0
 offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_us6bg")
 script = ExtResource("1_p1y6d")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1657336374]

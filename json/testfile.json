@@ -1,10 +1,10 @@
 {
 	"T1":[
 		
-		{"sender":"P","content":"Heyyyy, you alright?", "delivered":"true"},
-		{"sender":"G", "content":"Hiii :3, im gnu?", "delivered":"true"},
-		{"sender":"P", "content":"What're you doing today?", "delivered":"true"},
-		{"sender":"G", "content":"Nm n u?", "delivered":"false"}
+		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true},
+		{"sender":"G", "content":"Hiii :3, im gnu?", "delivered":true},
+		{"sender":"P", "content":"What're you doing today?", "delivered":true},
+		{"sender":"G", "content":"Nm n u?", "delivered":false}
 
 	]
 }
