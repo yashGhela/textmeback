@@ -1,6 +1,27 @@
 [gd_scene format=3 uid="uid://y2t81fwvojvq"]
 
 [ext_resource type="Script" uid="uid://cgr1b31tskhnl" path="res://scripts/caught_screen.gd" id="1_taaat"]
+[ext_resource type="Texture2D" uid="uid://cnjwxex1b8i5k" path="res://assets/UI/RestartButton.png" id="2_83bji"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_taaat"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83bji"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwaff"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipiyr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ahi15"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gkpa3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1jdr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nghh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a1nul"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4wu7m"]
 
 [node name="CaughtScreen" type="Control" unique_id=1357129286]
 layout_mode = 3
@@ -12,19 +33,54 @@ grow_vertical = 2
 script = ExtResource("1_taaat")
 
 [node name="Label" type="Label" parent="." unique_id=1790627313]
+z_index = 3
 layout_mode = 0
-offset_left = 466.0
+offset_left = 351.22
 offset_top = 278.0
-offset_right = 724.0
+offset_right = 813.2202
 offset_bottom = 305.0
-text = "YOU HAVE BEEN CAUGHT !"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "YOU HAVE BEEN CAUGHT ! 30 HOURS OF OVERTIME ADDED!!"
 
 [node name="Button" type="Button" parent="." unique_id=1358272910]
+z_index = 3
 layout_mode = 0
-offset_left = 544.0
-offset_top = 339.0
-offset_right = 609.0
-offset_bottom = 370.0
-text = "Restart"
+offset_left = 473.0
+offset_top = 356.0
+offset_right = 663.0
+offset_bottom = 405.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_taaat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_83bji")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fwaff")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ipiyr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ahi15")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1229314952]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.797249, 16.186512)
+color = Color(0, 0, 0, 1)
+
+[node name="PlayButton" type="Button" parent="." unique_id=1691255142]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 353.0
+offset_right = 655.0
+offset_bottom = 406.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gkpa3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m1jdr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7nghh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a1nul")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4wu7m")
+
+[node name="RestartButton" type="Sprite2D" parent="PlayButton" unique_id=1332962410]
+position = Vector2(112, 28)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_83bji")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
