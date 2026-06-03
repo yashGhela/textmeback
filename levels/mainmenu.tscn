@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bebs6uusvkj5y"]
+
+[ext_resource type="Script" uid="uid://dcknsiik3368h" path="res://scripts/mainmenu.gd" id="1_b77a6"]
+[ext_resource type="Texture2D" uid="uid://eqd6njmlbrpp" path="res://assets/UI/Logo.png" id="1_m1g0l"]
+[ext_resource type="Texture2D" uid="uid://ct3cyljofx0wu" path="res://assets/UI/PlayButton.png" id="2_bsv1t"]
+[ext_resource type="Texture2D" uid="uid://bcm7sxqla6xnf" path="res://assets/UI/ExitButton.png" id="3_bsv1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsv1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b77a6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prqwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqqso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmrhl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0v3g1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jry3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83o5j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_arjgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rhbb"]
+
+[node name="MainMenu" type="Control" unique_id=583760067]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b77a6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1850747102]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.797249, 16.186512)
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1653595369]
+position = Vector2(627, 212)
+texture = ExtResource("1_m1g0l")
+
+[node name="PlayButton" type="Button" parent="." unique_id=1309151670]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 390.0
+offset_right = 663.0
+offset_bottom = 443.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bsv1t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b77a6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_prqwa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aqqso")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fmrhl")
+
+[node name="PlayButton" type="Sprite2D" parent="PlayButton" unique_id=367436905]
+position = Vector2(121, 26)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bsv1t")
+
+[node name="ExitButton" type="Button" parent="." unique_id=1730574452]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 466.0
+offset_right = 667.0
+offset_bottom = 519.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0v3g1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jry3q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_83o5j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_arjgf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4rhbb")
+
+[node name="ExitButton" type="Sprite2D" parent="ExitButton" unique_id=835589532]
+position = Vector2(121, 26)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bsv1t")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
