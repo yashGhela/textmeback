@@ -7,11 +7,7 @@ var selected_text: Array = []
 @onready var textspopup: CanvasLayer = $"."
 @onready var textmsgportal: TextureRect = $textmsgportal
 var in_progress: bool = false
-@onready var senderlabel: Label = $textmsgportal/senderlabel
-@onready var receiverlabel: Label = $textmsgportal/receiverlabel
-@onready var reciever_rect: ColorRect = $textmsgportal/recieverRect
-@onready var sender_rect: ColorRect = $textmsgportal/senderRect
-
+const textscene = preload("res://game-elements/textcontainer.tscn")
 
 #we are testing changes here
 func _ready():
@@ -30,15 +26,18 @@ func load_scene_text():
 
 func show_text():
 	var current_text = selected_text.pop_front()
+	var nextext = textscene.instantiate()
+	
+	for child in textmsgportal.get_children():
+		child.queue_free()
+	
 	match current_text.sender:
 		"P":
-			senderlabel.text= current_text.content
-			senderlabel.visible=true
-			sender_rect.visible=true
+			nextext.callNewMessage(current_text.content,'s')
+			textmsgportal.add_child(nextext)
 		"G":
-			receiverlabel.text= current_text.content
-			receiverlabel.visible=true
-			reciever_rect.visible=true
+			nextext.callNewMessage(current_text.content,'r')
+			textmsgportal.add_child(nextext)
 
 func next_line():
 	if selected_text.size() > 0:
@@ -48,7 +47,7 @@ func next_line():
 
 func finish():
 	Signalbus.emit_signal("textingover")
-	senderlabel.text = ""
+	
 	textmsgportal.visible = false
 	in_progress = false
 	
