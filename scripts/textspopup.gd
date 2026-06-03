@@ -8,7 +8,7 @@ var selected_text: Array = []
 @onready var textmsgportal: ColorRect = $textmsgportal
 var in_progress: bool = false
 const textscene = preload("res://game-elements/textcontainer.tscn")
-@onready var message_container: VBoxContainer = $textmsgportal/message_container
+@onready var message_container: VBoxContainer = $textmsgportal/MarginContainer/message_container
 
 #we are testing changes here
 func _ready():

@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://dqoyjxkmej1gv"]
 
 [ext_resource type="Script" uid="uid://lrtesnjir717" path="res://scripts/receiver_container.gd" id="1_p1y6d"]
-[ext_resource type="StyleBox" uid="uid://dvrn6y4qmt8m6" path="res://game-elements/shaders/sendertres.tres" id="1_w6uke"]
 
 [node name="textContainer" type="PanelContainer" unique_id=591480758]
 z_index = 10
-offset_right = 286.0
-offset_bottom = 66.0
-theme_override_styles/panel = ExtResource("1_w6uke")
+offset_right = 454.0
+offset_bottom = 142.0
 script = ExtResource("1_p1y6d")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1657336374]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="senderlabel" type="Label" parent="MarginContainer" unique_id=1926895154]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "placeholder"
 horizontal_alignment = 1
