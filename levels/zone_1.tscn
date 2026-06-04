@@ -52,7 +52,7 @@ scene_text_file = "res://json/script.json"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7853127, 2, 10.290174)
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_x7iw5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32566, 0.87500006, 5.506438)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32566, 0.87500006, 5.079602)
 text_key = "T1"
 
 [node name="navregion" type="NavigationRegion3D" parent="." unique_id=104223075]
