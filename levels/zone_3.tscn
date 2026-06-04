@@ -4,8 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://clr33j1w2mxtq" path="res://game-elements/tiledfloor.tscn" id="2_1vk60"]
 [ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="3_4crtl"]
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_ub14q"]
+[ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_fevl3"]
+[ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_b16bm"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ub14q"]
+vertices = PackedVector3Array(3.3068314, 0.87499994, -2.718029, 3.0568314, 0.87499994, -2.718029, 2.8068314, 0.87499994, -2.218029, 3.3068314, 0.87499994, 2.281971, -0.94316864, 0.87499994, -6.968029, -0.94316864, 0.87499994, -8.718029, -1.6931686, 0.87499994, -8.718029, -1.1931686, 0.87499994, -6.218029, -0.94316864, 0.87499994, -3.968029, 2.8068314, 0.87499994, -3.968029, 2.8068314, 0.87499994, -4.468029, -0.94316864, 0.87499994, -4.468029, -1.1931686, 0.87499994, -2.468029, -1.6931686, 0.87499994, 2.281971, 2.8068314, 0.87499994, -6.468029, 2.8068314, 0.87499994, -6.968029, 6.0568314, 0.87499994, -8.218029, 6.8068314, 0.87499994, -8.468029, 6.8068314, 0.87499994, -8.718029, 2.8068314, 0.87499994, -8.718029, 3.5568314, 0.87499994, -3.718029, 5.5568314, 0.87499994, -3.718029, 6.0568314, 0.87499994, -4.968029, 6.3068314, 0.87499994, -4.468029, 12.056831, 0.87499994, -3.718029, 11.556831, 0.87499994, -4.968029, 11.306831, 0.87499994, -4.468029, 7.8068314, 0.87499994, -8.218029, 9.556831, 0.87499994, -8.218029, 10.556831, 0.87499994, -8.468029, 10.556831, 0.87499994, -8.718029, 9.556831, 0.87499994, -4.718029, 7.8068314, 0.87499994, -4.718029, 11.556831, 0.87499994, -8.218029, 15.306831, 0.87499994, -8.718029, 15.306831, 0.87499994, -3.718029)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(2, 3, 12), PackedInt32Array(12, 3, 13), PackedInt32Array(8, 12, 11), PackedInt32Array(11, 12, 7), PackedInt32Array(7, 12, 6), PackedInt32Array(6, 12, 13), PackedInt32Array(15, 14, 4), PackedInt32Array(4, 14, 7), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(10, 20, 9), PackedInt32Array(9, 20, 0), PackedInt32Array(9, 0, 1), PackedInt32Array(20, 14, 15), PackedInt32Array(20, 10, 14), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 15), PackedInt32Array(22, 15, 19), PackedInt32Array(22, 19, 16), PackedInt32Array(23, 21, 22), PackedInt32Array(26, 25, 24), PackedInt32Array(17, 18, 27), PackedInt32Array(27, 18, 28), PackedInt32Array(28, 18, 29), PackedInt32Array(29, 18, 30), PackedInt32Array(32, 27, 31), PackedInt32Array(31, 27, 28), PackedInt32Array(23, 32, 21), PackedInt32Array(21, 32, 31), PackedInt32Array(21, 31, 26), PackedInt32Array(21, 26, 24), PackedInt32Array(29, 30, 33), PackedInt32Array(33, 30, 34), PackedInt32Array(24, 25, 35), PackedInt32Array(35, 25, 33), PackedInt32Array(35, 33, 34)]
+
+[sub_resource type="Curve3D" id="Curve3D_fevl3"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2.18, 0, 0, 0, 0, 0, 0, -3.92, 0, -2.18, 0, 0, 0, 0, 0, 0, -3.92, 0, 2.03, 0, 0, 0, 0, 0, 0, -13.77, 0, 2.03, 0, 0, 0, 0, 0, 0, -13.77, 0, -2.18, 0, 0, 0, 0, 0, 0, 0, 0, -2.18),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
 
 [node name="zone3" type="Node3D" unique_id=1337478685]
 script = ExtResource("1_21uim")
@@ -80,3 +92,22 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.4
 
 [node name="Barrier6" parent="NavigationRegion3D" unique_id=209717043 instance=ExtResource("4_ub14q")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.460018, 1.6959759, -6.468419)
+
+[node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_fevl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.347153, 1.5352364, -6.3894854)
+
+[node name="Path3D" type="Path3D" parent="." unique_id=1984555746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.410088, 0, -6.2527013)
+curve = SubResource("Curve3D_fevl3")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=211574908]
+transform = Transform3D(-0.9999977, 0, 1.5099545e-07, 0, 0.99999833, 0, -1.5099545e-07, 0, -0.9999976, 0, 0, -1.4901161e-08)
+progress = 40.319977
+
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_b16bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0400887, 0)
+pathFollow = NodePath("..")
+path = NodePath("../..")
+pathStart = NodePath("../../pathStart")
+
+[node name="pathStart" type="Node3D" parent="Path3D" unique_id=1865022849]
