@@ -7,18 +7,40 @@
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_x7iw5"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_pfnxa"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pfnxa"]
+sky_top_color = Color(0.6336352, 0.5894615, 0.4344182, 1)
+sky_horizon_color = Color(0.8424294, 0.8194684, 0.7829337, 1)
+ground_bottom_color = Color(0.20779598, 0.16012543, 0.16903016, 1)
+ground_horizon_color = Color(0.8424294, 0.8194684, 0.7829337, 1)
+
+[sub_resource type="Sky" id="Sky_0b37p"]
+sky_material = SubResource("ProceduralSkyMaterial_pfnxa")
+
+[sub_resource type="Environment" id="Environment_384l5"]
+background_mode = 2
+sky = SubResource("Sky_0b37p")
+tonemap_mode = 2
+glow_enabled = true
+
 [sub_resource type="NavigationMesh" id="NavigationMesh_x7iw5"]
 vertices = PackedVector3Array(1.5568314, 0.87499994, 1.281971, 1.8068314, 0.87499994, 2.031971, 2.8068314, 0.87499994, 1.781971, 3.0568314, 0.87499994, 0.531971, 6.8068314, 0.87499994, 0.531971, 9.306831, 0.87499994, -1.718029, -1.6931686, 0.87499994, -1.718029, -1.6931686, 0.87499994, 3.531971, -0.19316864, 0.87499994, 3.531971, 0.05683136, 0.87499994, 1.281971, 7.0568314, 0.87499994, 2.281971, 9.306831, 0.87499994, 2.781971, 3.0568314, 0.87499994, 2.531971, 1.5568314, 0.87499994, 5.531971, 2.8068314, 0.87499994, 6.781971, 3.0568314, 0.87499994, 5.031971, -0.19316864, 0.87499994, 5.281971, -1.6931686, 0.87499994, 9.281971, 6.5568314, 0.87499994, 5.031971, 6.5568314, 0.87499994, 2.531971, 2.5568314, 0.87499994, 9.281971, 7.0568314, 0.87499994, 5.281971, 9.306831, 0.87499994, 9.281971, 6.8068314, 0.87499994, 7.031971)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 6), PackedInt32Array(0, 9, 3), PackedInt32Array(3, 9, 6), PackedInt32Array(10, 4, 11), PackedInt32Array(11, 4, 5), PackedInt32Array(2, 12, 1), PackedInt32Array(1, 12, 15), PackedInt32Array(1, 15, 13), PackedInt32Array(13, 15, 14), PackedInt32Array(8, 16, 7), PackedInt32Array(7, 16, 17), PackedInt32Array(12, 19, 15), PackedInt32Array(15, 19, 18), PackedInt32Array(13, 14, 16), PackedInt32Array(16, 14, 20), PackedInt32Array(16, 20, 17), PackedInt32Array(10, 11, 19), PackedInt32Array(19, 11, 18), PackedInt32Array(18, 11, 21), PackedInt32Array(23, 21, 22), PackedInt32Array(22, 21, 11), PackedInt32Array(14, 23, 20), PackedInt32Array(20, 23, 22)]
 
 [sub_resource type="Curve3D" id="Curve3D_x7iw5"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, -6, 0, 8, 0, 0, 0, 0, 0, 0, -6, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 8, 0, 0, 0, 1, 0, 0, -6, 0, 8, 1, 0, 0, 0, 0, 0, -6, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0)
 }
 point_count = 4
 
 [node name="Zone1" type="Node3D" unique_id=1650326014]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1425931638]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1387328184]
+environment = SubResource("Environment_384l5")
 
 [node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("1_gwv3q")]
 scene_text_file = "res://json/script.json"
@@ -93,17 +115,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1854735625]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.024543, 0, -0.039335966)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.024543, 0.7416489, -0.039335966)
 curve = SubResource("Curve3D_x7iw5")
 
+[node name="PathStart" type="Node3D" parent="Path3D" unique_id=777591666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10195446, 0.23289537, 0.495)
+
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1065151989]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_pfnxa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.510085, 2.2173412, 0)
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
-
-[node name="PathStart" type="Node3D" parent="Path3D" unique_id=777591666]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10195446, 0.23289537, 0.495)
