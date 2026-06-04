@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dg6vifgrudwmw"]
+
+[ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="1_gwv3q"]
+[ext_resource type="PackedScene" uid="uid://clr33j1w2mxtq" path="res://game-elements/tiledfloor.tscn" id="2_vqbg7"]
+[ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="3_ax7os"]
+[ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_ax7os"]
+[ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_x7iw5"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_x7iw5"]
+vertices = PackedVector3Array(1.5568314, 0.87499994, 1.281971, 1.8068314, 0.87499994, 2.031971, 2.8068314, 0.87499994, 1.781971, 3.0568314, 0.87499994, 0.531971, 6.8068314, 0.87499994, 0.531971, 9.306831, 0.87499994, -1.718029, -1.6931686, 0.87499994, -1.718029, -1.6931686, 0.87499994, 3.531971, -0.19316864, 0.87499994, 3.531971, 0.05683136, 0.87499994, 1.281971, 7.0568314, 0.87499994, 2.281971, 9.306831, 0.87499994, 2.781971, 3.0568314, 0.87499994, 2.531971, 1.5568314, 0.87499994, 5.531971, 2.8068314, 0.87499994, 6.781971, 3.0568314, 0.87499994, 5.031971, -0.19316864, 0.87499994, 5.281971, -1.6931686, 0.87499994, 9.281971, 6.5568314, 0.87499994, 5.031971, 6.5568314, 0.87499994, 2.531971, 2.5568314, 0.87499994, 9.281971, 7.0568314, 0.87499994, 5.281971, 9.306831, 0.87499994, 9.281971, 6.8068314, 0.87499994, 7.031971)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 6), PackedInt32Array(0, 9, 3), PackedInt32Array(3, 9, 6), PackedInt32Array(10, 4, 11), PackedInt32Array(11, 4, 5), PackedInt32Array(2, 12, 1), PackedInt32Array(1, 12, 15), PackedInt32Array(1, 15, 13), PackedInt32Array(13, 15, 14), PackedInt32Array(8, 16, 7), PackedInt32Array(7, 16, 17), PackedInt32Array(12, 19, 15), PackedInt32Array(15, 19, 18), PackedInt32Array(13, 14, 16), PackedInt32Array(16, 14, 20), PackedInt32Array(16, 20, 17), PackedInt32Array(10, 11, 19), PackedInt32Array(19, 11, 18), PackedInt32Array(18, 11, 21), PackedInt32Array(23, 21, 22), PackedInt32Array(22, 21, 11), PackedInt32Array(14, 23, 20), PackedInt32Array(20, 23, 22)]
+
+[node name="Zone1" type="Node3D" unique_id=1650326014]
+
+[node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("1_gwv3q")]
+scene_text_file = "res://json/script.json"
+
+[node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_ax7os")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -1)
+
+[node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_x7iw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32566, 0.87500006, 5.506438)
+
+[node name="navregion" type="NavigationRegion3D" parent="." unique_id=104223075]
+navigation_mesh = SubResource("NavigationMesh_x7iw5")
+
+[node name="tiledfloor2" parent="navregion" unique_id=465749372 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="tiledfloor3" parent="navregion" unique_id=1541408348 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="tiledfloor4" parent="navregion" unique_id=419123298 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="tiledfloor5" parent="navregion" unique_id=1340005171 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="tiledfloor6" parent="navregion" unique_id=883372399 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="tiledfloor7" parent="navregion" unique_id=1114034972 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+
+[node name="tiledfloor8" parent="navregion" unique_id=303471751 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+
+[node name="tiledfloor9" parent="navregion" unique_id=1708274756 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="tiledfloor10" parent="navregion" unique_id=836249166 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="tiledfloor11" parent="navregion" unique_id=1233894249 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+
+[node name="tiledfloor12" parent="navregion" unique_id=1301976390 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7)
+
+[node name="tiledfloor13" parent="navregion" unique_id=993824545 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -2)
+
+[node name="tiledfloor14" parent="navregion" unique_id=1941411289 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+
+[node name="tiledfloor15" parent="navregion" unique_id=510860825 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 4)
+
+[node name="tiledfloor16" parent="navregion" unique_id=2098883189 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 7)
+
+[node name="Barrier" parent="navregion" unique_id=1751531890 instance=ExtResource("4_ax7os")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.91315305, 1.6959759, 3.3850648)
+
+[node name="Barrier2" parent="navregion" unique_id=137425951 instance=ExtResource("4_ax7os")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.9342756, 1.6959759, 6.053734)
+
+[node name="Barrier3" parent="navregion" unique_id=1565070318 instance=ExtResource("4_ax7os")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.9342756, 1.6959759, 1.4935598)
+
+[node name="tiledfloor" parent="navregion" unique_id=1176899292 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="tiledfloor" parent="." unique_id=1653442649 instance=ExtResource("2_vqbg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
