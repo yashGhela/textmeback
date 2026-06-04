@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bs3ugc7gpcb54" path="res://scripts/barrier.gd" id="5_rqa58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dw2qa"]
-size = Vector3(5.918228, 3.074463, 3.8101215)
+size = Vector3(3.8995686, 3.074463, 2.2247472)
 
 [sub_resource type="Animation" id="Animation_bva0l"]
 length = 0.001
@@ -108,7 +108,7 @@ data = PackedVector3Array(-0.0099, -0.0099, 0.0099, -0.0099, 0.0099, 0.0099, 0.0
 script = ExtResource("5_rqa58")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=4734304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030555725, 0.19299316, -0.16587985)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.061060905, 0.19299316, 0.06319296)
 shape = SubResource("BoxShape3D_dw2qa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=784865688]
