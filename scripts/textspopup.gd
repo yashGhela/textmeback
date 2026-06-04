@@ -9,7 +9,7 @@ var selected_text: Array = []
 var in_progress: bool = false
 const textscene = preload("res://game-elements/textcontainer.tscn")
 @onready var message_container: VBoxContainer = $textmsgportal/MarginContainer/message_container
-
+var pending_transition: String = ""
 #we are testing changes here
 func _ready():
 	textmsgportal.visible=false
@@ -52,10 +52,15 @@ func show_text():
 			bubble.callNewMessage(current_text.content, 's', current_text.delivered)
 		"G":
 			bubble.callNewMessage(current_text.content, 'r', current_text.delivered)
+	
+	if current_text.has("transition") and current_text.transition:
+		pending_transition = current_text.transition
 	 # message_container is your VBoxContainer	
 func next_line():
 	if selected_text.size() > 0:
 		show_text()
+		
+
 	else:
 		finish()
 
@@ -66,6 +71,18 @@ func finish():
 
 	textmsgportal.visible = false
 	in_progress = false
+	
+	if pending_transition:
+			match pending_transition:
+				"zone_1":
+					get_tree().change_scene_to_file("res://levels/zone_1.tscn")
+				"zone_2":
+					get_tree().change_scene_to_file("res://levels/zone_2.tscn")
+				"zone_3":
+					get_tree().change_scene_to_file("res://levels/zone_3.tscn")
+				"zone_4":
+					get_tree().change_scene_to_file("res://levels/zone_4.tscn")
+				
 	
 	
 	
@@ -87,3 +104,5 @@ func on_display_texts(text_key):
 		in_progress = true
 		selected_text = scene_text[text_key].duplicate()
 		show_text()
+		
+		

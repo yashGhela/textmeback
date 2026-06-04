@@ -1,4 +1,10 @@
 {
+	
+	"OS":[
+		
+		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_1"},
+		{"sender":"G","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_1"}
+	],
 	"T1":[
 		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_2"}
 	],

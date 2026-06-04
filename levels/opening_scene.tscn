@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://rijrwjmqwy0x"]
+
+[ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="1_246u0"]
+[ext_resource type="Script" uid="uid://c1ockx6vam8ip" path="res://scripts/opening_scene.gd" id="1_lobpm"]
+
+[node name="opening scene" type="Control" unique_id=1659246868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lobpm")
+
+[node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("1_246u0")]
+scene_text_file = "res://json/script.json"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=763804585]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 1)
