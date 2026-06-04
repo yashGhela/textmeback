@@ -1,5 +1,9 @@
 {
 	"T1":[
-		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true}
+		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_2"}
+	],
+	
+	"T2":[
+		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_3"}
 	]
 }

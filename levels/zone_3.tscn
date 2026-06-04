@@ -1,6 +1,82 @@
 [gd_scene format=3 uid="uid://imudggysrvjl"]
 
 [ext_resource type="Script" uid="uid://cn3dg60cx8khu" path="res://scripts/world.gd" id="1_21uim"]
+[ext_resource type="PackedScene" uid="uid://clr33j1w2mxtq" path="res://game-elements/tiledfloor.tscn" id="2_1vk60"]
+[ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="3_4crtl"]
+[ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_ub14q"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ub14q"]
 
 [node name="zone3" type="Node3D" unique_id=1337478685]
 script = ExtResource("1_21uim")
+
+[node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_4crtl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67373466, 1.3748779, -0.43732068)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=848183509]
+navigation_mesh = SubResource("NavigationMesh_ub14q")
+
+[node name="tiledfloor" parent="NavigationRegion3D" unique_id=1176899292 instance=ExtResource("2_1vk60")]
+
+[node name="tiledfloor2" parent="NavigationRegion3D" unique_id=2106250724 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="tiledfloor3" parent="NavigationRegion3D" unique_id=1462105804 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="tiledfloor4" parent="NavigationRegion3D" unique_id=906450909 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="tiledfloor5" parent="NavigationRegion3D" unique_id=1693008925 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="tiledfloor6" parent="NavigationRegion3D" unique_id=290415793 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+
+[node name="tiledfloor7" parent="NavigationRegion3D" unique_id=1569583569 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="tiledfloor8" parent="NavigationRegion3D" unique_id=2066893682 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
+
+[node name="tiledfloor11" parent="NavigationRegion3D" unique_id=826335732 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.942999, 0, -6)
+
+[node name="tiledfloor12" parent="NavigationRegion3D" unique_id=1621004726 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.942999, 0, -6)
+
+[node name="tiledfloor13" parent="NavigationRegion3D" unique_id=1225638337 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.942999, 0, -9)
+
+[node name="tiledfloor14" parent="NavigationRegion3D" unique_id=1164287416 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.942999, 0, -9)
+
+[node name="tiledfloor17" parent="NavigationRegion3D" unique_id=661571267 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.938942, 0, -6)
+
+[node name="tiledfloor18" parent="NavigationRegion3D" unique_id=992048359 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.938942, 0, -6)
+
+[node name="tiledfloor19" parent="NavigationRegion3D" unique_id=854018044 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.938942, 0, -9)
+
+[node name="tiledfloor20" parent="NavigationRegion3D" unique_id=1895633187 instance=ExtResource("2_1vk60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.938942, 0, -9)
+
+[node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.852643, 1.6959759, -3.0851648)
+
+[node name="Barrier2" parent="NavigationRegion3D" unique_id=234169177 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.852643, 1.6959759, -5.448642)
+
+[node name="Barrier3" parent="NavigationRegion3D" unique_id=1175349426 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.852643, 1.6959759, -7.846014)
+
+[node name="Barrier4" parent="NavigationRegion3D" unique_id=294205593 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.935524, 1.6959759, -6.468419)
+
+[node name="Barrier5" parent="NavigationRegion3D" unique_id=610994893 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.460018, 1.6959759, -6.468419)
+
+[node name="Barrier6" parent="NavigationRegion3D" unique_id=209717043 instance=ExtResource("4_ub14q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.460018, 1.6959759, -6.468419)
