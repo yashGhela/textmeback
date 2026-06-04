@@ -34,3 +34,7 @@ func physics_update(_delta:float):
 	
 	animation_player.play("Armature|mixamo_com_001")
 	
+	get_tree().create_timer(3.0).timeout.connect(func():
+		Transitioned.emit(self,"FollowPath")
+		return)
+	
