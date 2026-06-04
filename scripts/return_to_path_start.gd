@@ -13,7 +13,7 @@ func physics_update(_delta:float):
 	
 	var disttoloc= boss.global_position.distance_to(location)
 	
-	if boss.nav_agent.is_navigation_finished():
+	if boss.nav_agent.is_navigation_finished() or disttoloc<0.1:
 		boss.velocity= Vector3.ZERO
 		if boss.pathFollow:
 			boss.pathFollow.progress = 0
