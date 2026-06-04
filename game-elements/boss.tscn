@@ -1214,7 +1214,7 @@ shape = SubResource("SphereShape3D_bjyle")
 path_height_offset = 0.1
 
 [node name="character" type="Node3D" parent="." unique_id=1297394556]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0.005, -0.8787254, 0.036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, -0.8787254, 0.036)
 
 [node name="Armature" type="Node3D" parent="character" unique_id=1022224346]
 transform = Transform3D(-50, 7.54979e-06, 3.3001182e-13, 0, -2.1855694e-06, 50, 7.54979e-06, 50, 2.1855694e-06, 0, 0.4375834, 0)

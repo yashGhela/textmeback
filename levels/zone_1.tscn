@@ -165,9 +165,9 @@ curve = SubResource("Curve3D_x7iw5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7296972, 0.23289537, -0.07792556)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1065151989]
-transform = Transform3D(-0.99999434, 0, -8.742234e-08, 0, 0.999999, 0, 8.742228e-08, 0, -0.99999505, -2, 0, 0)
+transform = Transform3D(-0.99999434, 0, 1.5099505e-07, 0, 0.999999, 0, -1.5099495e-07, 0, -0.99999505, -2, 0, 0)
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_pfnxa")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("6_pfnxa")]
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
