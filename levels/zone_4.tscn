@@ -1,6 +1,74 @@
 [gd_scene format=3 uid="uid://gxyy4nmjytko"]
 
 [ext_resource type="Script" uid="uid://cn3dg60cx8khu" path="res://scripts/world.gd" id="1_ogxhh"]
+[ext_resource type="PackedScene" uid="uid://clr33j1w2mxtq" path="res://game-elements/tiledfloor.tscn" id="2_t2slc"]
+[ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="3_tvafx"]
+[ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_3md0w"]
+[ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_n18bd"]
+[ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_14qkt"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_3md0w"]
+vertices = PackedVector3Array(4.0568314, 0.87499994, -0.968029, 4.3068314, 0.87499994, -0.46802902, 6.3068314, 0.87499994, -0.46802902, 6.3068314, 0.87499994, -5.718029, -1.6931686, 0.87499994, -5.718029, -1.6931686, 0.87499994, -0.968029, 0.30683136, 0.87499994, -0.968029, 4.0568314, 0.87499994, 1.031971, 6.3068314, 0.87499994, 2.281971, 0.30683136, 0.87499994, 1.031971, -1.6931686, 0.87499994, 2.281971)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(6, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(1, 2, 7), PackedInt32Array(7, 2, 8), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 8), PackedInt32Array(6, 9, 5), PackedInt32Array(5, 9, 10)]
+
+[sub_resource type="Curve3D" id="Curve3D_3md0w"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0)
+}
+point_count = 1
 
 [node name="zone4" type="Node3D" unique_id=29018991]
 script = ExtResource("1_ogxhh")
+
+[node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_n18bd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1350265, 0.874878, -5.018127)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1834274329]
+navigation_mesh = SubResource("NavigationMesh_3md0w")
+
+[node name="tiledfloor" parent="NavigationRegion3D" unique_id=1176899292 instance=ExtResource("2_t2slc")]
+
+[node name="tiledfloor2" parent="NavigationRegion3D" unique_id=726144806 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="tiledfloor3" parent="NavigationRegion3D" unique_id=2009740012 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="tiledfloor4" parent="NavigationRegion3D" unique_id=240657389 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="tiledfloor5" parent="NavigationRegion3D" unique_id=1712289290 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="tiledfloor6" parent="NavigationRegion3D" unique_id=452536048 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+
+[node name="tiledfloor7" parent="NavigationRegion3D" unique_id=1944385594 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="tiledfloor8" parent="NavigationRegion3D" unique_id=1755924175 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+
+[node name="tiledfloor9" parent="NavigationRegion3D" unique_id=1461652501 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -0.060316384)
+
+[node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_tvafx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.424111, 1.3748779, 1.7175574)
+
+[node name="Path3D" type="Path3D" parent="." unique_id=487328160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1561909, 0, -2.2948031)
+curve = SubResource("Curve3D_3md0w")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1139067908]
+
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_14qkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9456339, 0)
+pathFollow = NodePath("..")
+path = NodePath("../..")
+pathStart = NodePath("../../pathStart")
+
+[node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
