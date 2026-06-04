@@ -29,7 +29,7 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Arr
 [sub_resource type="Curve3D" id="Curve3D_x7iw5"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, -8, 0, 10, 0, 0, 0, 0, 0, 0, -8, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 10, 0, 0, 0, 0, 0, 0, -10, 0, 10, 0, 0, 0, 0, 0, 0, -10, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0)
 }
 point_count = 4
@@ -47,7 +47,7 @@ environment = SubResource("Environment_384l5")
 scene_text_file = "res://json/script.json"
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_ax7os")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 7.736664)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7853127, 2, 10.290174)
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_x7iw5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32566, 0.87500006, 5.506438)
@@ -158,17 +158,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1854735625]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.025, 0, -0.039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.204109, 1.4401402, -0.63784456)
 curve = SubResource("Curve3D_x7iw5")
 
 [node name="PathStart" type="Node3D" parent="Path3D" unique_id=777591666]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10195446, 0.23289537, 0.495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7296972, 0.23289537, -0.07792556)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1065151989]
-transform = Transform3D(-0.9999992, 0, -8.742278e-08, 0, 0.9999992, 0, 8.7422706e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.99999434, 0, -8.742234e-08, 0, 0.999999, 0, 8.742228e-08, 0, -0.99999505, -2, 0, 0)
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_pfnxa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.510085, 2.2173412, 0)
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
