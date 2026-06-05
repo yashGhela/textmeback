@@ -2,8 +2,83 @@
 	
 	"OS":[
 		
-		{"sender":"P","content":"Heyyy cutie, how work? ", "delivered":true},
-		{"sender":"G","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_1"}
+		{
+			"sender":"G",
+			"content":"Heyyy cutie, how work? ", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Hiiii beautiful, it’s boring ash as always lol :<", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Aww im sorry baby, your boss again?", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Yeahhh you know how he is", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Such a dick ", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Never gets off my back, always thinks im slacking off  ", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Pain in the ass", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"I just got up", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Im boutta go get my nails done :3", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Sounds fun \nEnjoy it Abby ", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"What the fuck", 
+			"delivered":true
+		},
+
+		{
+			"sender":"G",
+			"content":"Excuse me?", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Sorry baby it was a mistake", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"I was trying to type baby", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"fuck no signal", 
+			"delivered":false,
+			"transition":"zone_1"
+		}
 	],
 	"T1":[
 		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_2"}
