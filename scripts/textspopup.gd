@@ -56,12 +56,21 @@ func show_text():
 	
 	if current_text.has("transition") and current_text.transition:
 		pending_transition = current_text.transition
-	 # message_container is your VBoxContainer	
+		
+	await get_tree().process_frame
+	scroll_to_bottom()
 	
-	scroll_container.get_v_scroll_bar().value = scroll_container.get_v_scroll_bar().max_value
+func scroll_to_bottom():
+	# Ensure scroll container is ready
+	if scroll_container and scroll_container.get_v_scroll_bar():
+		await get_tree().process_frame
+		scroll_container.get_v_scroll_bar().value = scroll_container.get_v_scroll_bar().max_value
+	
+	
 func next_line():
 	if selected_text.size() > 0:
 		show_text()
+		scroll_container.get_v_scroll_bar().value = scroll_container.get_v_scroll_bar().max_value
 	
 
 	else:
