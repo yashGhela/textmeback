@@ -23,7 +23,7 @@ point_count = 1
 script = ExtResource("1_togyr")
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("2_mnaum")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83256865, 1.3748779, 1.0136585)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.827167, 1.3748779, 3.9179945)
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_cheaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.2081654, -8)

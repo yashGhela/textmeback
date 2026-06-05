@@ -49,7 +49,7 @@ environment = SubResource("Environment_384l5")
 scene_text_file = "res://json/script.json"
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_ax7os")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7853127, 2, 10.290174)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4003882, 2, 3.9969158)
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_x7iw5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32566, 0.87500006, 5.079602)

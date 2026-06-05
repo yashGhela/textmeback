@@ -23,9 +23,6 @@ func enter():
 
 
 func physics_update(_delta:float):
-	if player == null:
-		Transitioned.emit(self, "Scan")
-		return
 	
 	print("chasing")
 	
