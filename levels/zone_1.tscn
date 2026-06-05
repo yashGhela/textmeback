@@ -174,3 +174,6 @@ transform = Transform3D(-0.99999434, 0, 1.5099505e-07, 0, 0.999999, 0, -1.509949
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
+
+[node name="spawn point" type="Node3D" parent="." unique_id=1279749095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7545147, -2.9326324, 0)

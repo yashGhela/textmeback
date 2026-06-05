@@ -16,10 +16,10 @@ border_size = 0.25
 [sub_resource type="Curve3D" id="Curve3D_14774"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.13, 0, 0, 0, 0, 0, 0, 0, 0, 0.82, 0, 0),
-"tilts": PackedFloat32Array(0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.13, 0, 0),
+"tilts": PackedFloat32Array(0)
 }
-point_count = 2
+point_count = 1
 
 [node name="zone2" type="Node3D" unique_id=1027013841]
 script = ExtResource("1_togyr")
