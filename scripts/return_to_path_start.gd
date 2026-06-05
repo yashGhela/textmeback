@@ -5,7 +5,7 @@ extends State
 
 func enter():
 	boss.is_pathing=false
-	print("Returning to path startsw")
+	print("Returning to path starts")
 
 func physics_update(_delta:float):
 	var location =boss.pathStart.global_position
