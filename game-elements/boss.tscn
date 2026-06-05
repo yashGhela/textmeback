@@ -1168,7 +1168,7 @@ shape = SubResource("ConvexPolygonShape3D_oba0a")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1883649453 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("5_6khgh")
-initial_state = NodePath("Chase")
+initial_state = NodePath("FollowPath")
 
 [node name="FollowPath" type="Node" parent="StateMachine" unique_id=709931413 node_paths=PackedStringArray("boss")]
 script = ExtResource("7_gwceh")
