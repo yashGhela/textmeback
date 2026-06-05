@@ -81,7 +81,32 @@
 		}
 	],
 	"T1":[
-		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_2"}
+		{
+			"sender":"G",
+			"content":"Yeah it autocorrected to your fucking ex’s name", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Yeah fucking right", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"WHY THE FUCK ARENT YOU ANSWERING ME???", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Baby I promise it was a mistake!", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"Fuck still no signal", 
+			"delivered":false,
+			"transition":"zone_2"
+		}
 	],
 	
 	"T2":[
