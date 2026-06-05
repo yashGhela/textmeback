@@ -7,6 +7,7 @@ var direction =1.0
 
 
 func enter():
+	boss.is_pathing=false
 	print("Following path")
 
 

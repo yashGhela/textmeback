@@ -4,6 +4,7 @@ extends State
 @onready var animation_player: AnimationPlayer = $"../../character/AnimationPlayer"
 
 func enter():
+	boss.is_pathing=false
 	print("Returning to path startsw")
 
 func physics_update(_delta:float):

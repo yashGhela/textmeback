@@ -12,6 +12,7 @@ extends CharacterBody3D
 
 @onready var scan: Node = $StateMachine/Scan
 
+var is_pathing=true
 
 func update_target_location(target_location):
 	nav_agent.target_position=target_location
@@ -25,11 +26,13 @@ func on_shake_shelf(location):
 	state_machine.current_state=investigate
 
 func _physics_process(delta: float) -> void:
-	move_and_slide()
+	if !is_pathing:
+		move_and_slide()
 	
 
 
 func _on_seekzone_area_entered(area: Area3D) -> void:
+	is_pathing=false
 	print(area)
 	if area.is_in_group("Player"):
 		state_machine.current_state=chase 
@@ -37,5 +40,6 @@ func _on_seekzone_area_entered(area: Area3D) -> void:
 
 
 func _on_closezone_area_entered(area: Area3D) -> void:
+	is_pathing=false
 	if area.is_in_group("Player"):
 		state_machine.current_state=chase 
