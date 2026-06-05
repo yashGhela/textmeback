@@ -110,6 +110,147 @@
 	],
 	
 	"T2":[
-		{"sender":"P","content":"Heyyyy, you alright?", "delivered":true, "transition":"zone_3"}
+		{
+			"sender":"G",
+			"content":"I cant believe you ", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"After everything we've been through", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"its fine go talk to that bitch since you love her so badly ", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Abby please listen to me", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"FUCK TYPO", 
+			"delivered":false
+		},
+		{
+			"sender":"G",
+			"content":"...", 
+			"delivered":true,
+			"transition":"zone_3"
+		}
+	],
+	"T3":[
+		{
+			"sender":"P",
+			"content":"Hey are you there? It was a typo baby I promise ", 
+			"delivered":false
+		},
+
+		{
+			"sender":"P",
+			"content":"Fuck this wifi", 
+			"delivered":false
+		},
+
+
+		{
+			"sender":"P",
+			"content":"Im so dumb", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"so dumb", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"WHAT?", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Yeah I am fucking dumb for believing in you", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"m so DUMB FOR FALLIGN IN LOVE WITH YOU", 
+			"delivered":true,
+			"transition":"zone_4"
+		}
+
+	],
+	"T4":[
+		{
+			"sender":"P",
+			"content":"BABY PLEASE IT WAS. A TYPO AND I DIDNT CALL YOU CRAZY THE SIGNAL HERE IS TERRIBLE!", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"FUCK YOU", 
+			"delivered":true
+		},
+
+		{
+			"sender":"P",
+			"content":"PLEASE BABY", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"You love me?", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Fuck you", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"I promise it was a typo, its all a huge misunderstanding, please, let me explain over dinner tonight ", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Why should I believe you", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Because… I love you too ", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"...", 
+			"delivered":true
+		},
+		{
+			"sender":"G",
+			"content":"Fine…tonight", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"Thank you Abby", 
+			"delivered":true
+		},
+		{
+			"sender":"P",
+			"content":"baby*", 
+			"delivered":false
+		},
+		{
+			"sender":"P",
+			"content":"FUCK", 
+			"delivered":false,
+			"transition":"end"
+		}
 	]
 }
