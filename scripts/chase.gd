@@ -46,7 +46,7 @@ func physics_update(_delta:float):
 	
 	if direction.length() > 0.01:
 		# Look at player's position
-		boss.look_at(player.global_position, Vector3.UP)
+		character.look_at(player.global_position, Vector3.UP)
 		
 		#if character:
 			#var target_angle = atan2(direction.x, direction.z)
