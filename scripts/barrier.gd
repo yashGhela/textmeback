@@ -15,12 +15,13 @@ func _input(event):
 
 
 func _on_area_entered(area: Area3D) -> void:
+	if area.is_in_group("Player"):
+		active_area=true 
 	
-	active_area=true 
 	
 
 
 func _on_area_exited(area: Area3D) -> void:
-	
-	active_area=false 
+	if area.is_in_group("Player"):
+		active_area=false 
 	
