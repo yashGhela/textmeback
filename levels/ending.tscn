@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c68hp2pgska1i"]
+
+[ext_resource type="Texture2D" uid="uid://cnjwxex1b8i5k" path="res://assets/UI/RestartButton.png" id="1_anow7"]
+[ext_resource type="Script" uid="uid://ckm8d2j45q7uw" path="res://scripts/ending.gd" id="1_qt50k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qt50k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dob33"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjuy8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f8nk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7udrn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lodq4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cl2c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhicl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5rl63"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8xtl"]
+
+[node name="Ending" type="Control" unique_id=612469949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qt50k")
+
+[node name="Label" type="Label" parent="." unique_id=613539150]
+z_index = 3
+layout_mode = 0
+offset_left = 339.0
+offset_top = 237.0
+offset_right = 826.0
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Yikes... 
+Anyways 
+Thanks for playing this game i made in 2 weeks during exams :)"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=216815078]
+z_index = 3
+layout_mode = 0
+offset_left = 473.0
+offset_top = 356.0
+offset_right = 663.0
+offset_bottom = 405.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qt50k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dob33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bjuy8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f8nk4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7udrn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=769629764]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.797249, 16.186512)
+color = Color(0, 0, 0, 1)
+
+[node name="PlayButton" type="Button" parent="." unique_id=1988204311]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 353.0
+offset_right = 655.0
+offset_bottom = 406.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lodq4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6cl2c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lhicl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5rl63")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y8xtl")
+
+[node name="RestartButton" type="Sprite2D" parent="PlayButton" unique_id=810938205]
+position = Vector2(112, 28)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_anow7")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
