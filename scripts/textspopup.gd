@@ -6,6 +6,7 @@ var scene_text: Dictionary = {}
 var selected_text: Array = []
 @onready var textspopup: CanvasLayer = $"."
 @onready var textmsgportal: ColorRect = $textmsgportal
+@onready var scroll_container: ScrollContainer = $textmsgportal/MarginContainer/ScrollContainer
 var in_progress: bool = false
 const textscene = preload("res://game-elements/textcontainer.tscn")
 @onready var message_container: VBoxContainer = $textmsgportal/MarginContainer/ScrollContainer/message_container
@@ -56,10 +57,12 @@ func show_text():
 	if current_text.has("transition") and current_text.transition:
 		pending_transition = current_text.transition
 	 # message_container is your VBoxContainer	
+	
+	scroll_container.get_v_scroll_bar().value = scroll_container.get_v_scroll_bar().max_value
 func next_line():
 	if selected_text.size() > 0:
 		show_text()
-		
+	
 
 	else:
 		finish()
