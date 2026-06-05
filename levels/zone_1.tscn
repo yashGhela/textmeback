@@ -9,21 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_pfnxa"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="8_384l5"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pfnxa"]
-sky_top_color = Color(0.6336352, 0.5894615, 0.4344182, 1)
-sky_horizon_color = Color(0.8424294, 0.8194684, 0.7829337, 1)
-ground_bottom_color = Color(0.20779598, 0.16012543, 0.16903016, 1)
-ground_horizon_color = Color(0.8424294, 0.8194684, 0.7829337, 1)
-
-[sub_resource type="Sky" id="Sky_0b37p"]
-sky_material = SubResource("ProceduralSkyMaterial_pfnxa")
-
-[sub_resource type="Environment" id="Environment_384l5"]
-background_mode = 2
-sky = SubResource("Sky_0b37p")
-tonemap_mode = 2
-glow_enabled = true
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_x7iw5"]
 vertices = PackedVector3Array(-0.44316864, 0.8606547, 2.031971, -0.19316864, 0.8606547, 2.531971, 1.5568314, 0.8606547, 1.531971, 1.8068314, 0.8606547, 0.031970978, -1.9431686, 0.8606547, 2.031971, 3.0568314, 0.8606547, -3.718029, -4.6931686, 0.8606547, -3.718029, -4.6931686, 0.8606547, 4.031971, -2.1931686, 0.8606547, 4.031971, 3.3068314, 0.8606547, 0.031970978, 5.5568314, 0.8606547, 0.031970978, 5.8068314, 0.8606547, 1.031971, 9.306831, 0.8606547, 1.031971, 9.306831, 0.8606547, -3.718029, 1.8068314, 0.8606547, 2.031971, -0.19316864, 0.8606547, 6.031971, 1.5568314, 0.8606547, 7.281971, 1.8068314, 0.8606547, 6.781971, 5.5568314, 0.8606547, 2.031971, 5.5568314, 0.8606547, 6.781971, 5.8068314, 0.8606547, 7.781971, 9.306831, 0.8606547, 7.781971, -2.1931686, 0.8606547, 6.031971, -4.6931686, 0.8606547, 12.281971, 1.8068314, 0.8606547, 8.781971, 5.5568314, 0.8606547, 8.781971, 9.306831, 0.8606547, 12.281971)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 4, 5), PackedInt32Array(5, 4, 6), PackedInt32Array(8, 7, 4), PackedInt32Array(4, 7, 6), PackedInt32Array(5, 9, 3), PackedInt32Array(12, 11, 10), PackedInt32Array(10, 9, 5), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 5), PackedInt32Array(1, 2, 14), PackedInt32Array(17, 16, 15), PackedInt32Array(11, 12, 18), PackedInt32Array(18, 12, 19), PackedInt32Array(19, 12, 20), PackedInt32Array(20, 12, 21), PackedInt32Array(1, 14, 15), PackedInt32Array(15, 14, 17), PackedInt32Array(17, 14, 18), PackedInt32Array(17, 18, 19), PackedInt32Array(8, 22, 7), PackedInt32Array(7, 22, 23), PackedInt32Array(16, 24, 15), PackedInt32Array(15, 24, 22), PackedInt32Array(22, 24, 23), PackedInt32Array(20, 21, 25), PackedInt32Array(25, 21, 26), PackedInt32Array(25, 26, 24), PackedInt32Array(24, 26, 23)]
@@ -36,15 +21,23 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_384l5"]
+sky_top_color = Color(0.5648126, 0.7202057, 0.8377818, 1)
+sky_horizon_color = Color(1.1472955, 1.2236742, 1.3083483, 1)
+ground_bottom_color = Color(0.29045665, 0.44057846, 0.6616989, 1)
+ground_horizon_color = Color(1.1472955, 1.2236742, 1.3083483, 1)
+
+[sub_resource type="Sky" id="Sky_8dnxx"]
+sky_material = SubResource("ProceduralSkyMaterial_384l5")
+
+[sub_resource type="Environment" id="Environment_1pddc"]
+background_mode = 2
+sky = SubResource("Sky_8dnxx")
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="Zone1" type="Node3D" unique_id=1650326014]
 script = ExtResource("1_0b37p")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1425931638]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1387328184]
-environment = SubResource("Environment_384l5")
 
 [node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("1_gwv3q")]
 scene_text_file = "res://json/script.json"
@@ -180,4 +173,11 @@ pathStart = NodePath("../../PathStart")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7545147, -2.9326324, 0)
 
 [node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("8_384l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -20, 2.732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -23, 2.732)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=863476173]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=376789919]
+environment = SubResource("Environment_1pddc")

@@ -5,7 +5,7 @@ extends Area3D
 var active_area = false
 @export var is_interactable:=true
 @export var Player:Node3D
-var location = self.global_position
+var location = global_position
 
 func _input(event):
 	if active_area and event.is_action_pressed("interact") and is_interactable:

@@ -19,6 +19,21 @@ _data = {
 }
 point_count = 1
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kchll"]
+sky_top_color = Color(0.5648126, 0.7202057, 0.8377818, 1)
+sky_horizon_color = Color(1.1472955, 1.2236742, 1.3083483, 1)
+ground_bottom_color = Color(0.29045665, 0.44057846, 0.6616989, 1)
+ground_horizon_color = Color(1.1472955, 1.2236742, 1.3083483, 1)
+
+[sub_resource type="Sky" id="Sky_3sd5b"]
+sky_material = SubResource("ProceduralSkyMaterial_kchll")
+
+[sub_resource type="Environment" id="Environment_03ah2"]
+background_mode = 2
+sky = SubResource("Sky_3sd5b")
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="zone4" type="Node3D" unique_id=29018991]
 script = ExtResource("1_ogxhh")
 
@@ -75,4 +90,11 @@ pathStart = NodePath("../../pathStart")
 [node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
 
 [node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("7_kchll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -20, 2.732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -25, 2.732)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1374059284]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090364856]
+environment = SubResource("Environment_03ah2")
