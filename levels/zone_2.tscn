@@ -11,11 +11,12 @@
 [sub_resource type="NavigationMesh" id="NavigationMesh_0urum"]
 vertices = PackedVector3Array(2.8068314, 0.87499994, -2.968029, 1.8068314, 0.87499994, -2.718029, 1.8068314, 0.87499994, -1.968029, 4.8068314, 0.87499994, -1.968029, 4.8068314, 0.87499994, -2.968029, 8.556831, 0.87499994, -1.718029, 8.306831, 0.87499994, 2.281971, 9.306831, 0.87499994, 2.281971, 9.306831, 0.87499994, -2.718029, 5.0568314, 0.87499994, -0.46802902, 3.8068314, 0.87499994, -0.21802902, 3.8068314, 0.87499994, 2.281971, 6.8068314, 0.87499994, 2.281971, 6.8068314, 0.87499994, -1.968029, 2.8068314, 0.87499994, -6.468029, 4.8068314, 0.87499994, -6.468029, 7.8068314, 0.87499994, -6.718029, 7.8068314, 0.87499994, -8.718029, -0.44316864, 0.87499994, -8.718029, -0.44316864, 0.87499994, -6.718029, 0.80683136, 0.87499994, -1.718029, -1.6931686, 0.87499994, -2.718029, 1.0568314, 0.87499994, -0.21802902, -1.6931686, 0.87499994, 2.281971, 1.0568314, 0.87499994, 2.281971, 3.3068314, 0.87499994, 2.531971, 1.3068314, 0.87499994, 5.281971, 3.3068314, 0.87499994, 5.281971)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(3, 4, 9), PackedInt32Array(9, 4, 13), PackedInt32Array(15, 4, 14), PackedInt32Array(14, 4, 0), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(17, 14, 19), PackedInt32Array(17, 19, 18), PackedInt32Array(5, 13, 8), PackedInt32Array(8, 13, 4), PackedInt32Array(2, 20, 1), PackedInt32Array(1, 20, 21), PackedInt32Array(20, 22, 21), PackedInt32Array(21, 22, 24), PackedInt32Array(21, 24, 23), PackedInt32Array(25, 24, 11), PackedInt32Array(11, 24, 22), PackedInt32Array(11, 22, 10), PackedInt32Array(27, 26, 25), PackedInt32Array(25, 26, 24)]
+border_size = 0.25
 
 [sub_resource type="Curve3D" id="Curve3D_14774"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.87, 0, 0, 0, 0, 0, 0, 0, 0, 0.82, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.13, 0, 0, 0, 0, 0, 0, 0, 0, 0.82, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -85,10 +86,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7887352, 0, -2.833851)
 curve = SubResource("Curve3D_14774")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1948247063]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.87, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.13, 0, 0)
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_2iwax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -0.75562525)
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../pathStart")
