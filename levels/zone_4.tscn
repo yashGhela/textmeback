@@ -13,11 +13,12 @@ vertices = PackedVector3Array(4.0568314, 0.87499994, -0.968029, 4.3068314, 0.874
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 4), PackedInt32Array(6, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(1, 2, 7), PackedInt32Array(7, 2, 8), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 8), PackedInt32Array(6, 9, 5), PackedInt32Array(5, 9, 10)]
 
 [sub_resource type="Curve3D" id="Curve3D_3md0w"]
+closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 3.5, 0, 0, 0, 0, 0, 0, -0.08, 0, 3.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
 }
-point_count = 1
+point_count = 4
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kchll"]
 sky_top_color = Color(0.5648126, 0.7202057, 0.8377818, 1)
@@ -38,7 +39,8 @@ glow_enabled = true
 script = ExtResource("1_ogxhh")
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_n18bd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1350265, 0.874878, -5.018127)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.824749, 0.874878, -12.434908)
+text_key = "T4"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1834274329]
 navigation_mesh = SubResource("NavigationMesh_3md0w")
@@ -61,31 +63,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
 
 [node name="tiledfloor7" parent="NavigationRegion3D" unique_id=1944385594 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, -0.001801014, -0.009739921, -6.004711)
 
 [node name="tiledfloor8" parent="NavigationRegion3D" unique_id=1755924175 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 2.998182, -0.0007945999, -6.000002)
 
 [node name="tiledfloor9" parent="NavigationRegion3D" unique_id=1461652501 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 5.998165, 0.008150722, -5.995292)
+
+[node name="tiledfloor10" parent="NavigationRegion3D" unique_id=1235929845 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 0.0027439594, -0.0077534216, -8.903618)
+
+[node name="tiledfloor11" parent="NavigationRegion3D" unique_id=761468698 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -8.8989105)
+
+[node name="tiledfloor12" parent="NavigationRegion3D" unique_id=1119182319 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 6.0027103, 0.010137222, -8.894198)
+
+[node name="tiledfloor13" parent="NavigationRegion3D" unique_id=576267823 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.964362, -0.009739921, -6.004711)
+
+[node name="tiledfloor14" parent="NavigationRegion3D" unique_id=1812253801 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 11.964346, -0.0007945999, -6.000002)
+
+[node name="tiledfloor15" parent="NavigationRegion3D" unique_id=1991027213 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.964329, 0.008150722, -5.995292)
+
+[node name="tiledfloor16" parent="NavigationRegion3D" unique_id=1710385467 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.968907, -0.0077534216, -8.903618)
+
+[node name="tiledfloor17" parent="NavigationRegion3D" unique_id=1988427287 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.966164, 0, -8.8989105)
+
+[node name="tiledfloor18" parent="NavigationRegion3D" unique_id=1406215340 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.968874, 0.010137222, -8.894198)
+
+[node name="tiledfloor19" parent="NavigationRegion3D" unique_id=659648753 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.964362, -0.009739921, -11.847818)
+
+[node name="tiledfloor20" parent="NavigationRegion3D" unique_id=1334069592 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 11.964346, -0.0007945999, -11.843109)
+
+[node name="tiledfloor21" parent="NavigationRegion3D" unique_id=566067922 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.964329, 0.008150722, -11.8384)
+
+[node name="tiledfloor22" parent="NavigationRegion3D" unique_id=1273691154 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.968907, -0.0077534216, -14.746725)
+
+[node name="tiledfloor23" parent="NavigationRegion3D" unique_id=1159138233 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.966164, 0, -14.742018)
+
+[node name="tiledfloor24" parent="NavigationRegion3D" unique_id=1696311170 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.968874, 0.010137222, -14.737306)
 
 [node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -0.060316384)
+
+[node name="Barrier2" parent="NavigationRegion3D" unique_id=22501623 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -2.894646)
+
+[node name="Barrier3" parent="NavigationRegion3D" unique_id=567465289 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -5.7501082)
+
+[node name="Barrier4" parent="NavigationRegion3D" unique_id=1129469164 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.34553, 1.6959759, -6.532118)
+
+[node name="Barrier5" parent="NavigationRegion3D" unique_id=1595543186 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.008555, 1.6959759, -6.532118)
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_tvafx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.424111, 1.3748779, 1.7175574)
 
 [node name="Path3D" type="Path3D" parent="." unique_id=487328160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1561909, 0, -2.2948031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5968447, 0, -7.9727488)
 curve = SubResource("Curve3D_3md0w")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1139067908]
+transform = Transform3D(0.9997389, 0, -0.022851175, 0, 1, 0, 0.022851175, 0, 0.9997389, -2.3283064e-10, 0, 0)
+progress = 22.920921
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("6_14qkt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9456339, 0)
-pathFollow = NodePath("..")
-path = NodePath("../..")
-pathStart = NodePath("../../pathStart")
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 instance=ExtResource("6_14qkt")]
 
 [node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
 

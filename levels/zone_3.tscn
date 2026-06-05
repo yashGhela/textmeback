@@ -111,6 +111,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.4
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_fevl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.347153, 1.5352364, -6.3894854)
+text_key = "T3"
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1984555746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.410088, 0, -6.2527013)
