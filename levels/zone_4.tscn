@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_3md0w"]
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_n18bd"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_14qkt"]
+[ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="7_kchll"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_3md0w"]
 vertices = PackedVector3Array(4.0568314, 0.87499994, -0.968029, 4.3068314, 0.87499994, -0.46802902, 6.3068314, 0.87499994, -0.46802902, 6.3068314, 0.87499994, -5.718029, -1.6931686, 0.87499994, -5.718029, -1.6931686, 0.87499994, -0.968029, 0.30683136, 0.87499994, -0.968029, 4.0568314, 0.87499994, 1.031971, 6.3068314, 0.87499994, 2.281971, 0.30683136, 0.87499994, 1.031971, -1.6931686, 0.87499994, 2.281971)
@@ -72,3 +73,6 @@ path = NodePath("../..")
 pathStart = NodePath("../../pathStart")
 
 [node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
+
+[node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("7_kchll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -20, 2.732)

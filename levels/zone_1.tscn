@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_ax7os"]
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_x7iw5"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_pfnxa"]
+[ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="8_384l5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pfnxa"]
 sky_top_color = Color(0.6336352, 0.5894615, 0.4344182, 1)
@@ -177,3 +178,6 @@ pathStart = NodePath("../../PathStart")
 
 [node name="spawn point" type="Node3D" parent="." unique_id=1279749095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7545147, -2.9326324, 0)
+
+[node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("8_384l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -20, 2.732)
