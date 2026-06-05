@@ -13,11 +13,12 @@ vertices = PackedVector3Array(2.8068314, 0.87499994, -2.968029, 1.8068314, 0.874
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(3, 4, 9), PackedInt32Array(9, 4, 13), PackedInt32Array(15, 4, 14), PackedInt32Array(14, 4, 0), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(17, 14, 19), PackedInt32Array(17, 19, 18), PackedInt32Array(5, 13, 8), PackedInt32Array(8, 13, 4), PackedInt32Array(2, 20, 1), PackedInt32Array(1, 20, 21), PackedInt32Array(20, 22, 21), PackedInt32Array(21, 22, 24), PackedInt32Array(21, 24, 23), PackedInt32Array(25, 24, 11), PackedInt32Array(11, 24, 22), PackedInt32Array(11, 22, 10), PackedInt32Array(27, 26, 25), PackedInt32Array(25, 26, 24)]
 
 [sub_resource type="Curve3D" id="Curve3D_14774"]
+closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.87, 0, 0, 0, 0, 0, 0, 0, 0, 0.82, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
 }
-point_count = 1
+point_count = 2
 
 [node name="zone2" type="Node3D" unique_id=1027013841]
 script = ExtResource("1_togyr")
@@ -48,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -9)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -9)
 
 [node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("5_tieyt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8850026, 1.6959759, -1.1059233)
+transform = Transform3D(0.99994946, -0.010052927, 0, 0.010052927, 0.99994946, 0, 0, 0, 1, 2.8850026, 1.6959759, -1.1059233)
 
 [node name="Barrier2" parent="NavigationRegion3D" unique_id=1918429642 instance=ExtResource("5_tieyt")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.467004, 1.6959759, 0.10820696)
@@ -79,11 +80,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
 [node name="tiledfloor9" parent="NavigationRegion3D" unique_id=1345234615 instance=ExtResource("4_57via")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -2.9874442)
 
-[node name="Path3D" type="Path3D" parent="." unique_id=14161327]
+[node name="Path3D" type="Path3D" parent="." unique_id=14161327 groups=["Boss"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7887352, 0, -2.833851)
 curve = SubResource("Curve3D_14774")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1948247063]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.87, 0, 0)
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") instance=ExtResource("6_2iwax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
