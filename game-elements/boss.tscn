@@ -1156,7 +1156,7 @@ _data = {
 &"Armature|mixamo_com_001": SubResource("Animation_xbx68")
 }
 
-[node name="Boss" type="CharacterBody3D" unique_id=150727419]
+[node name="Boss" type="CharacterBody3D" unique_id=150727419 groups=["Boss"]]
 script = ExtResource("1_mn5np")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1971257450]
@@ -1224,7 +1224,7 @@ path_height_offset = 0.1
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.005, -0.8787254, 0.036)
 
 [node name="Armature" type="Node3D" parent="character" unique_id=1022224346]
-transform = Transform3D(-50, 7.54979e-06, 3.3001182e-13, 0, -2.1855694e-06, 50, 7.54979e-06, 50, 2.1855694e-06, 0, 0.4375834, 0)
+transform = Transform3D(-50, 7.54979e-06, 3.3001182e-13, 0, -2.1855694e-06, 50, 7.54979e-06, 50, 2.1855694e-06, 0, 0, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="character/Armature" unique_id=1879192078]
 bones/0/name = "Bone"

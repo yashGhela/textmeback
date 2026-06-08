@@ -19,10 +19,10 @@ func update_target_location(target_location):
 	nav_agent.target_position=target_location
 
 func _ready() -> void:
-	Signalbus.connect("shakeShelf",Callable(self,"on_shake_shelf"))
+	
 	Signalbus.connect("freezeboss",Callable(self, "on_freeze_boss"))
 
-func on_shake_shelf(location):
+func investigate_shelf(location):
 	print(location)
 	distLoc=location
 	state_machine.current_state=investigate
