@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_n18bd"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_14qkt"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="7_kchll"]
+[ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="9_03ah2"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_3md0w"]
 vertices = PackedVector3Array(10.299562, 0.856816, -8.468452, 10.299562, 0.856816, -6.7184525, 12.049562, 0.856816, -6.7184525, 12.049562, 0.856816, -8.468452, 13.799562, 0.856816, -8.718452, 15.299562, 0.856816, -8.718452, 15.299562, 0.856816, -14.468452, 7.0495625, 0.856816, -9.218452, 8.549562, 0.856816, -8.718452, 7.0495625, 0.856816, -14.468452, 6.7995625, 0.856816, -8.718452, 4.0495625, 0.856816, -1.9684525, 2.2995625, 0.856816, -1.9684525, 2.2995625, 0.856816, -0.96845245, 4.2995625, 0.856816, -0.71845245, 13.799562, 0.856816, -4.4684525, 12.049562, 0.856816, -4.7184525, 10.299562, 0.856816, -4.7184525, 8.549562, 0.856816, -4.4684525, 6.7995625, 0.856816, -3.7184525, 15.299562, 0.856816, -3.4684525, 4.0495625, 0.856816, 1.0315475, 2.2995625, 0.856816, 1.0315475, 2.2995625, 0.856816, 2.2815475, 6.5495625, 0.856816, 2.2815475, 4.2995625, 0.856816, -4.9684525, 2.2995625, 0.856816, -4.7184525, 2.2995625, 0.856816, -3.9684525, 4.2995625, 0.856816, -3.7184525, 4.2995625, 0.856816, -6.4684525, 3.7995625, 0.856816, -8.718452, 3.7995625, 0.856816, -6.7184525, 0.29956245, 0.856816, -4.7184525, 0.049562454, 0.856816, -3.7184525, 0.049562454, 0.856816, -0.71845245, 0.29956245, 0.856816, -1.9684525, -1.7004375, 0.856816, -8.718452, -1.7004375, 0.856816, 2.2815475, 0.29956245, 0.856816, 1.0315475, 0.049562454, 0.856816, -6.4684525)
@@ -146,7 +147,11 @@ curve = SubResource("Curve3D_3md0w")
 transform = Transform3D(0.9997389, 0, -0.022851175, 0, 1, 0, 0.022851175, 0, 0.9997389, -2.3283064e-10, 0, 0)
 progress = 22.920921
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 instance=ExtResource("6_14qkt")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_14qkt")]
+pathFollow = NodePath("..")
+path = NodePath("../..")
+pathStart = NodePath("../../pathStart")
+caughtscreen = NodePath("../../../CaughtScreen")
 
 [node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
 
@@ -159,3 +164,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090364856]
 environment = SubResource("Environment_03ah2")
+
+[node name="CaughtScreen" parent="." unique_id=1357129286 instance=ExtResource("9_03ah2")]
+file = "zone_4"

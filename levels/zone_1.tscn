@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_x7iw5"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_pfnxa"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="8_384l5"]
+[ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="9_8dnxx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x7iw5"]
 vertices = PackedVector3Array(-0.44316864, 0.8606547, 2.031971, -0.19316864, 0.8606547, 2.531971, 1.5568314, 0.8606547, 1.531971, 1.8068314, 0.8606547, 0.031970978, -1.9431686, 0.8606547, 2.031971, 3.0568314, 0.8606547, -3.718029, -4.6931686, 0.8606547, -3.718029, -4.6931686, 0.8606547, 4.031971, -2.1931686, 0.8606547, 4.031971, 3.3068314, 0.8606547, 0.031970978, 5.5568314, 0.8606547, 0.031970978, 5.8068314, 0.8606547, 1.031971, 9.306831, 0.8606547, 1.031971, 9.306831, 0.8606547, -3.718029, 1.8068314, 0.8606547, 2.031971, -0.19316864, 0.8606547, 6.031971, 1.5568314, 0.8606547, 7.281971, 1.8068314, 0.8606547, 6.781971, 5.5568314, 0.8606547, 2.031971, 5.5568314, 0.8606547, 6.781971, 5.8068314, 0.8606547, 7.781971, 9.306831, 0.8606547, 7.781971, -2.1931686, 0.8606547, 6.031971, -4.6931686, 0.8606547, 12.281971, 1.8068314, 0.8606547, 8.781971, 5.5568314, 0.8606547, 8.781971, 9.306831, 0.8606547, 12.281971)
@@ -162,12 +163,13 @@ curve = SubResource("Curve3D_x7iw5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7296972, 0.23289537, -0.07792556)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1065151989]
-transform = Transform3D(-0.99999434, 0, 1.5099505e-07, 0, 0.999999, 0, -1.5099495e-07, 0, -0.99999505, -2, 0, 0)
+transform = Transform3D(-0.99999434, 0, -8.742234e-08, 0, 0.999999, 0, 8.742228e-08, 0, -0.99999505, -2, 0, 0)
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("6_pfnxa")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") groups=["Boss"] instance=ExtResource("6_pfnxa")]
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
+caughtscreen = NodePath("../../../CaughtScreen")
 
 [node name="spawn point" type="Node3D" parent="." unique_id=1279749095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7545147, -2.9326324, 0)
@@ -181,3 +183,5 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=376789919]
 environment = SubResource("Environment_1pddc")
+
+[node name="CaughtScreen" parent="." unique_id=1357129286 instance=ExtResource("9_8dnxx")]

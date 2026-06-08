@@ -13,6 +13,7 @@ func _input(event):
 		
 		Signalbus.emit_signal("display_texts", text_key)
 		Signalbus.emit_signal("wififound",zonename)
+		Signalbus.emit_signal("freezeboss")
 
 
 

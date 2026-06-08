@@ -8,7 +8,8 @@ extends CharacterBody3D
 @export var pathStart:Node3D
 @onready var chase: Node = $StateMachine/Chase
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-
+@export var caughtscreen:Control
+@onready var freeze: Node = $StateMachine/Freeze
 
 @onready var scan: Node = $StateMachine/Scan
 
@@ -19,11 +20,15 @@ func update_target_location(target_location):
 
 func _ready() -> void:
 	Signalbus.connect("shakeShelf",Callable(self,"on_shake_shelf"))
+	Signalbus.connect("freezeboss",Callable(self, "on_freeze_boss"))
 
 func on_shake_shelf(location):
 	print(location)
 	distLoc=location
 	state_machine.current_state=investigate
+
+func on_freeze_boss():
+	state_machine.current_state = freeze
 
 func _physics_process(delta: float) -> void:
 	if !is_pathing:

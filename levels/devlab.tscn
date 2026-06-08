@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="3_r31pu"]
 [ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="4_w7w6m"]
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="5_eqxup"]
+[ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="6_akf43"]
 [ext_resource type="PackedScene" uid="uid://clr33j1w2mxtq" path="res://game-elements/tiledfloor.tscn" id="7_om75w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnn2g"]
@@ -65,10 +66,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.495)
 transform = Transform3D(0.9999982, 0, 0, 0, 0.99999917, 0, 0, 0, 0.9999984, 0, 0, 0)
 rotation_mode = 0
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("5_eqxup")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") groups=["Boss"] instance=ExtResource("5_eqxup")]
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../PathStart")
+caughtscreen = NodePath("../../../CaughtScreen")
+
+[node name="CaughtScreen" parent="." unique_id=1357129286 instance=ExtResource("6_akf43")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1748953675]
 navigation_mesh = SubResource("NavigationMesh_eqxup")

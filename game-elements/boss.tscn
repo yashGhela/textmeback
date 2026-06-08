@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://v5pbmwsgb5nf" path="res://scripts/scan.gd" id="9_uxrab"]
 [ext_resource type="Script" uid="uid://b3bm46bjfrklg" path="res://scripts/return_to_path_start.gd" id="10_1k661"]
 [ext_resource type="Shader" uid="uid://505mpqnvv57c" path="res://game-elements/shaders/outline.gdshader" id="12_8pw5j"]
+[ext_resource type="Script" uid="uid://qk4hmgrqat4c" path="res://scripts/freeze.gd" id="12_vitmy"]
 [ext_resource type="Shader" uid="uid://cvelxc5besak3" path="res://game-elements/shaders/imagecelshader.gdshader" id="13_vitmy"]
 [ext_resource type="Texture2D" uid="uid://cut7yrmmwu621" path="res://assets/blends/face.png" id="14_mlshi"]
 
@@ -1185,8 +1186,9 @@ script = ExtResource("8_bjyle")
 boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
-[node name="Find" type="Node" parent="StateMachine" unique_id=899880748]
+[node name="Find" type="Node" parent="StateMachine" unique_id=899880748 node_paths=PackedStringArray("boss")]
 script = ExtResource("9_bjyle")
+boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="Scan" type="Node" parent="StateMachine" unique_id=862630858 node_paths=PackedStringArray("boss")]
@@ -1196,6 +1198,11 @@ metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
 [node name="ReturnToPathStart" type="Node" parent="StateMachine" unique_id=133891193 node_paths=PackedStringArray("boss")]
 script = ExtResource("10_1k661")
+boss = NodePath("../..")
+metadata/_custom_type_script = "uid://dd0t76g04wuo"
+
+[node name="Freeze" type="Node" parent="StateMachine" unique_id=327518175 node_paths=PackedStringArray("boss")]
+script = ExtResource("12_vitmy")
 boss = NodePath("../..")
 metadata/_custom_type_script = "uid://dd0t76g04wuo"
 
@@ -1214,7 +1221,7 @@ shape = SubResource("SphereShape3D_bjyle")
 path_height_offset = 0.1
 
 [node name="character" type="Node3D" parent="." unique_id=1297394556]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.005, -0.8787254, 0.036)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.005, -0.8787254, 0.036)
 
 [node name="Armature" type="Node3D" parent="character" unique_id=1022224346]
 transform = Transform3D(-50, 7.54979e-06, 3.3001182e-13, 0, -2.1855694e-06, 50, 7.54979e-06, 50, 2.1855694e-06, 0, 0.4375834, 0)

@@ -1,5 +1,7 @@
 extends State
 
+@export var boss:CharacterBody3D
+
 func enter():
 	print("FOUND YOU BITCH!!!")
-	get_tree().call_deferred("change_scene_to_file","res://game-elements/caught_screen.tscn")
+	boss.caughtscreen.visible=true

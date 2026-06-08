@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_b16bm"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="7_fcix1"]
 [ext_resource type="PackedScene" uid="uid://c6f3jondvu7h8" path="res://game-elements/textspopup.tscn" id="8_rmp6p"]
+[ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="9_vfuha"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ub14q"]
 vertices = PackedVector3Array(-1.1931686, 0.87499994, -8.318029, -0.79316866, 0.87499994, -8.718029, -1.6931686, 0.87499994, -8.718029, -1.6931686, 0.87499994, -3.118029, -1.1931686, 0.87499994, -3.118029, -1.1931686, 0.87499994, -3.618029, -1.1931686, 0.87499994, -7.318029, -0.79316866, 0.87499994, -6.318029, 1.7068315, 0.87499994, -6.318029, 1.7068315, 0.87499994, -6.918029, -0.9931686, 0.87499994, -7.018029, -1.1931686, 0.87499994, -4.918029, -1.1931686, 0.87499994, -5.918029, -0.79316866, 0.87499994, -4.5180287, -0.79316866, 0.87499994, -4.0180287, 1.8068314, 0.87499994, -4.0180287, 1.8068314, 0.87499994, -4.5180287, 6.4068317, 0.87499994, -8.518029, 6.9068317, 0.87499994, -8.518029, 6.9068317, 0.87499994, -8.718029, 2.5068316, 0.87499994, -6.918029, 2.7068315, 0.87499994, -6.218029, 2.9068313, 0.87499994, -8.318029, 2.9068313, 0.87499994, -7.318029, 6.006831, 0.87499994, -8.118029, 2.9068313, 0.87499994, -5.918029, 6.006831, 0.87499994, -5.418029, 2.5068316, 0.87499994, -8.718029, 2.9068313, 0.87499994, -5.318029, 7.4068317, 0.87499994, -8.518029, 9.906832, 0.87499994, -8.518029, 10.506831, 0.87499994, -8.518029, 10.506831, 0.87499994, -8.718029, 7.4068317, 0.87499994, -4.418029, 6.9068317, 0.87499994, -4.418029, 6.9068317, 0.87499994, -3.718029, 10.506831, 0.87499994, -3.718029, 10.506831, 0.87499994, -4.418029, 9.906832, 0.87499994, -4.418029, 7.8068314, 0.87499994, -4.818029, 9.506831, 0.87499994, -4.818029, 7.8068314, 0.87499994, -8.118029, 9.506831, 0.87499994, -8.118029, 11.006831, 0.87499994, -8.518029, 15.206831, 0.87499994, -8.718029, 11.006831, 0.87499994, -4.418029, 11.406832, 0.87499994, -4.818029, 15.206831, 0.87499994, -3.718029, 11.406832, 0.87499994, -8.118029, 2.9068313, 0.87499994, -3.0180287, 3.3068314, 0.87499994, -2.9180288, 3.3068314, 0.87499994, -3.318029, 2.9068313, 0.87499994, -3.618029, 2.7068315, 0.87499994, -4.618029, 2.7068315, 0.87499994, -3.9180288, 3.7068315, 0.87499994, -3.718029, 6.1068316, 0.87499994, -4.618029, 2.8068314, 0.87499994, -2.4180288, 3.3068314, 0.87499994, 2.281971, -1.1931686, 0.87499994, -2.618029, -1.6931686, 0.87499994, 2.281971, -0.79316866, 0.87499994, -2.218029, 2.5068316, 0.87499994, -2.218029)
@@ -121,11 +122,12 @@ curve = SubResource("Curve3D_fevl3")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=211574908]
 transform = Transform3D(0.9999977, 0, 0, 0, 0.99999833, 0, 0, 0, 0.9999976, 0, 0, 0)
 
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart") groups=["Boss"] instance=ExtResource("6_b16bm")]
+[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") groups=["Boss"] instance=ExtResource("6_b16bm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0400887, 0)
 pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../../pathStart")
+caughtscreen = NodePath("../../../CaughtScreen")
 
 [node name="pathStart" type="Node3D" parent="Path3D" unique_id=1865022849]
 
@@ -138,6 +140,9 @@ shadow_enabled = true
 
 [node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("8_rmp6p")]
 scene_text_file = "res://json/script.json"
+
+[node name="CaughtScreen" parent="." unique_id=1357129286 instance=ExtResource("9_vfuha")]
+file = "zone_3"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=590198698]
 environment = SubResource("Environment_rmp6p")
