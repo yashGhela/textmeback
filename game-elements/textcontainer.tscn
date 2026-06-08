@@ -20,6 +20,6 @@ theme_override_constants/margin_bottom = 10
 
 [node name="senderlabel" type="Label" parent="MarginContainer" unique_id=1926895154]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 17
 text = "placeholder"
 horizontal_alignment = 1
