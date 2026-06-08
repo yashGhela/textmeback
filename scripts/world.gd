@@ -21,8 +21,11 @@ func get_closest_enemy(location:Vector3) -> CharacterBody3D:
 	var closest: CharacterBody3D = null
 	var closest_distance := INF
 	
-	for boss in get_tree().get_nodes_in_group("Boss"):
-		if boss == null or not boss is CharacterBody3D:
+	for node in get_tree().get_nodes_in_group("Boss"):
+		if not node is CharacterBody3D:
+			continue
+		var boss = node as CharacterBody3D
+		if boss == null:
 			continue
 		
 		var distance := location.distance_squared_to(boss.global_position)

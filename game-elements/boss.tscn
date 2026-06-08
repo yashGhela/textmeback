@@ -1410,7 +1410,7 @@ bones/25/position = Vector3(0, 0.003683055, 0)
 bones/25/rotation = Quaternion(0, 0, 0, 1)
 bones/25/scale = Vector3(1, 1, 1)
 
-[node name="Cylinder" type="MeshInstance3D" parent="character/Armature/Skeleton3D" unique_id=377358942 groups=["Player"]]
+[node name="Cylinder" type="MeshInstance3D" parent="character/Armature/Skeleton3D" unique_id=377358942]
 transform = Transform3D(1, -2.9802322e-08, 9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 1, -1.2940494e-05, -4.6398738e-05, 0.00020869821)
 mesh = SubResource("ArrayMesh_bfcbh")
 skin = SubResource("Skin_6fxp3")
