@@ -6,7 +6,11 @@ var active_area = false
 @export var is_interactable:=true
 @export var Player:Node3D
 var location = global_position
+@onready var interaction_sprite: Sprite3D = $InteractionSprite
 
+func _ready() -> void:
+	if is_interactable:
+		interaction_sprite.visible=true
 func _input(event):
 	if active_area and event.is_action_pressed("interact") and is_interactable:
 		print("Interacting")
