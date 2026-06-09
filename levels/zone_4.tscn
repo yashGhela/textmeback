@@ -188,13 +188,13 @@ transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.
 transform = Transform3D(-0.81917214, -0.001391952, 0.5735461, -0.0016755637, 0.9999987, 3.3777724e-05, -0.5735453, -0.00093334046, -0.8191734, 9.57316, 1.6959276, -23.33453)
 
 [node name="Barrier3" parent="NavigationRegion3D" unique_id=567465289 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-0.9999931, -0.0016754422, -0.003318298, -0.0016755635, 0.99999857, 3.377779e-05, 0.0033182364, 3.9340834e-05, -0.9999945, -3.6348171, 1.6960242, -8.773558)
+transform = Transform3D(-4.371132e-08, -7.629072e-11, -1, -0.0017453283, 0.9999984, 0, 0.99999845, 0.0017453282, -4.371139e-08, -5.135447, 1.6960242, -10.155272)
 
 [node name="Barrier5" parent="NavigationRegion3D" unique_id=1595543186 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 7.133177, 1.6959759, -10.869095)
 
 [node name="Barrier6" parent="NavigationRegion3D" unique_id=2089853920 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.550436, 1.6875526, -11.59166)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.8352327, 1.6875526, -11.457626)
 is_interactable = false
 
 [node name="Barrier7" parent="NavigationRegion3D" unique_id=484271928 instance=ExtResource("4_3md0w")]
@@ -205,7 +205,10 @@ is_interactable = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4302511, 1.3748779, 1.635881)
 
 [node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("7_kchll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -25, 2.732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -20, 2.732)
+
+[node name="CollisionShape3D" parent="respawnzone" index="0" unique_id=1740847205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.86792, 0, -11.642334)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1374059284]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)
@@ -248,3 +251,5 @@ pathFollow = NodePath("..")
 path = NodePath("../..")
 pathStart = NodePath("../startpoint")
 caughtscreen = NodePath("../../../CaughtScreen")
+
+[editable path="respawnzone"]
