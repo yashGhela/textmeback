@@ -58,10 +58,6 @@ environment = SubResource("Environment_2iwax")
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("2_mnaum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5755591, 1.3748779, 1.0786419)
 
-[node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_cheaw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.156773, 1.2081654, -17.95383)
-text_key = "T2"
-
 [node name="textspopup" parent="." unique_id=618903319 instance=ExtResource("4_cheaw")]
 scene_text_file = "res://json/script.json"
 
@@ -241,3 +237,7 @@ pathStart = NodePath("../../pathStart")
 caughtscreen = NodePath("../../../CaughtScreen")
 
 [node name="pathStart" type="Node3D" parent="secondpath" unique_id=1508251008]
+
+[node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_cheaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.456066, 0.87499624, -19.098198)
+text_key = "T2"

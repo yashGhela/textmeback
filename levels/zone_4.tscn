@@ -242,5 +242,9 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 
 [node name="startpoint" type="Node3D" parent="secondpath/PathFollow3D" unique_id=757675957]
 
-[node name="Boss" parent="secondpath/PathFollow3D" unique_id=2079790610 instance=ExtResource("6_14qkt")]
+[node name="Boss" parent="secondpath/PathFollow3D" unique_id=2079790610 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_14qkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7442427, 0)
+pathFollow = NodePath("..")
+path = NodePath("../..")
+pathStart = NodePath("../startpoint")
+caughtscreen = NodePath("../../../CaughtScreen")

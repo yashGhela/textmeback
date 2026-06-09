@@ -207,3 +207,14 @@ environment = SubResource("Environment_rmp6p")
 [node name="secondpath" type="Path3D" parent="." unique_id=1384533801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.793806, 0, -10.8350935)
 curve = SubResource("Curve3D_vfuha")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="secondpath" unique_id=2018968308]
+
+[node name="Boss" parent="secondpath/PathFollow3D" unique_id=2086428108 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_b16bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8343601, 0)
+pathFollow = NodePath("..")
+path = NodePath("../..")
+pathStart = NodePath("../../pathstart")
+caughtscreen = NodePath("../../../CaughtScreen")
+
+[node name="pathstart" type="Node3D" parent="secondpath" unique_id=1722125392]
