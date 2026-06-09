@@ -189,13 +189,13 @@ transform = Transform3D(-0.81917214, -0.001391952, 0.5735461, -0.0016755637, 0.9
 
 [node name="Barrier3" parent="NavigationRegion3D" unique_id=567465289 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-0.9999931, -0.0016754422, -0.003318298, -0.0016755635, 0.99999857, 3.377779e-05, 0.0033182364, 3.9340834e-05, -0.9999945, -3.6348171, 1.6960242, -8.773558)
-is_interactable = false
 
 [node name="Barrier5" parent="NavigationRegion3D" unique_id=1595543186 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 7.133177, 1.6959759, -10.869095)
 
 [node name="Barrier6" parent="NavigationRegion3D" unique_id=2089853920 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.550436, 1.6875526, -11.59166)
+is_interactable = false
 
 [node name="Barrier7" parent="NavigationRegion3D" unique_id=484271928 instance=ExtResource("4_3md0w")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.316147, 1.6955435, -5.877981)
@@ -238,7 +238,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.194206, 0, -12.524131)
 curve = SubResource("Curve3D_03ah2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="secondpath" unique_id=651408160]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0, 0)
 
 [node name="startpoint" type="Node3D" parent="secondpath/PathFollow3D" unique_id=757675957]
 
