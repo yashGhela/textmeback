@@ -1429,6 +1429,9 @@ surface_material_override/9 = SubResource("ShaderMaterial_wjad0")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="character" unique_id=1223176200]
 libraries/ = SubResource("AnimationLibrary_c8i2h")
 
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1336360686]
+target_position = Vector3(0, 0, 5)
+
 [connection signal="area_entered" from="seekzone" to="." method="_on_seekzone_area_entered"]
 [connection signal="area_exited" from="seekzone" to="." method="_on_seekzone_area_exited"]
 [connection signal="area_entered" from="closezone" to="." method="_on_closezone_area_entered"]

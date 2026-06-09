@@ -19,10 +19,14 @@ func _input(event):
 
 
 func _on_interaction_zone_area_entered(area: Area3D) -> void:
-	active_area=true # Replace with function body.
+	if area.is_in_group("Player"):
+		active_area=true 
+	print("wifi are:",area)
 	print("wifipoint: ", active_area)
 
 
 func _on_interaction_zone_area_exited(area: Area3D) -> void:
-	active_area=false # Replace with function body.
+	if area.is_in_group("Player"):
+		active_area=false  # Replace with function body.
+	print("wifi are:",area)
 	print("wifipoint: ", active_area)
