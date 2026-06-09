@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bpkwjoe1r37e7" path="res://scripts/respawnzone.gd" id="1_s615c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yqofa"]
-size = Vector3(40, 40, 40)
+size = Vector3(67.73584, 40, 63.284668)
 
 [node name="respawnzone" type="Area3D" unique_id=1240018557]
 script = ExtResource("1_s615c")

@@ -94,7 +94,8 @@ func finish():
 					get_tree().change_scene_to_file("res://levels/zone_3.tscn")
 				"zone_4":
 					get_tree().change_scene_to_file("res://levels/zone_4.tscn")
-				
+				"end":
+					get_tree().change_scene_to_file("res://levels/ending.tscn")
 	
 	
 	
