@@ -8,7 +8,7 @@ var active_area =false
 
 
 func _input(event):
-	if active_area and event.is_action_pressed("interact"):
+	if active_area==true and event.is_action_pressed("interact"):
 		print("Interacting with wifi point")
 		
 		Signalbus.emit_signal("display_texts", text_key)
@@ -20,7 +20,9 @@ func _input(event):
 
 func _on_interaction_zone_area_entered(area: Area3D) -> void:
 	active_area=true # Replace with function body.
+	print("wifipoint: ", active_area)
 
 
 func _on_interaction_zone_area_exited(area: Area3D) -> void:
 	active_area=false # Replace with function body.
+	print("wifipoint: ", active_area)

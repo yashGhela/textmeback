@@ -239,5 +239,5 @@ caughtscreen = NodePath("../../../CaughtScreen")
 [node name="pathStart" type="Node3D" parent="secondpath" unique_id=1508251008]
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_cheaw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.456066, 1.9067504, -19.098198)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.456066, 0.87499624, -19.098198)
 text_key = "T2"
