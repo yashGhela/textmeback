@@ -19,6 +19,6 @@ func update(delta:float):
 		elif boss.pathFollow.progress_ratio<=0.01: 
 			direction=1.0
 	
-		boss.pathFollow.progress+=2.0*delta*direction
+		boss.pathFollow.progress+=3.0*delta*direction
 		animation_player.play("Armature|mixamo_com_001")
 	

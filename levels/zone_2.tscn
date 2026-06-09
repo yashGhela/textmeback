@@ -33,10 +33,10 @@ border_size = 0.25
 [sub_resource type="Curve3D" id="Curve3D_14774"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 4.5, 0, 0, 0, 0, 0, 0, -4, 0, 4.5, 0, 0, 0, 0, 0, 0, -4, 0, 8, 0, 0, 0, 0, 0, 0, 4, 0, 8),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 4.5, 0, 0, 0, 0, 0, 0, -4, 0, 8, 0, 0, 0, 0, 0, 0, -4, 0, 4.5, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 6
+point_count = 7
 
 [sub_resource type="Curve3D" id="Curve3D_tieyt"]
 _data = {
@@ -68,11 +68,9 @@ scene_text_file = "res://json/script.json"
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1559895365]
 navigation_mesh = SubResource("NavigationMesh_0urum")
 
-[node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("5_tieyt")]
-transform = Transform3D(0.99994946, -0.010052927, 0, 0.010052927, 0.99994946, 0, 0, 0, 1, -11.144554, 1.6959759, -1.1059233)
-
 [node name="Barrier2" parent="NavigationRegion3D" unique_id=1918429642 instance=ExtResource("5_tieyt")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7367153, 1.6959759, -2.2107625)
+is_interactable = false
 
 [node name="tiledfloor" parent="NavigationRegion3D" unique_id=478729784 instance=ExtResource("4_57via")]
 
@@ -108,9 +106,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
 
 [node name="tiledfloor12" parent="NavigationRegion3D" unique_id=1351924863 instance=ExtResource("4_57via")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
-
-[node name="tiledfloor13" parent="NavigationRegion3D" unique_id=1366284751 instance=ExtResource("4_57via")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -6)
 
 [node name="tiledfloor14" parent="NavigationRegion3D" unique_id=859279483 instance=ExtResource("4_57via")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
@@ -202,7 +197,6 @@ is_interactable = false
 
 [node name="Barrier4" parent="NavigationRegion3D" unique_id=681588574 instance=ExtResource("5_tieyt")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7646198, 1.696098, -9.449329)
-is_interactable = false
 
 [node name="Barrier5" parent="NavigationRegion3D" unique_id=1994300966 instance=ExtResource("5_tieyt")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 16.244514, 1.696098, -14.109028)
@@ -222,7 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.628432, 0, -12.131924)
 curve = SubResource("Curve3D_14774")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="firstpath" unique_id=1948247063]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Boss" parent="firstpath/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_2iwax")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.06702232, 1.7431684, -0.009755373)
