@@ -6,21 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cqmr6h5f2qftu" path="res://game-elements/player.tscn" id="3_tvafx"]
 [ext_resource type="PackedScene" uid="uid://df1ey8l4lmwag" path="res://game-elements/barrier.tscn" id="4_3md0w"]
 [ext_resource type="PackedScene" uid="uid://cj8rg2108d8iu" path="res://game-elements/wifi_point.tscn" id="5_n18bd"]
-[ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_14qkt"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="7_kchll"]
 [ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="9_03ah2"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_3md0w"]
-vertices = PackedVector3Array(10.299562, 0.856816, -8.468452, 10.299562, 0.856816, -6.7184525, 12.049562, 0.856816, -6.7184525, 12.049562, 0.856816, -8.468452, 13.799562, 0.856816, -8.718452, 15.299562, 0.856816, -8.718452, 15.299562, 0.856816, -14.468452, 7.0495625, 0.856816, -9.218452, 8.549562, 0.856816, -8.718452, 7.0495625, 0.856816, -14.468452, 6.7995625, 0.856816, -8.718452, 4.0495625, 0.856816, -1.9684525, 2.2995625, 0.856816, -1.9684525, 2.2995625, 0.856816, -0.96845245, 4.2995625, 0.856816, -0.71845245, 13.799562, 0.856816, -4.4684525, 12.049562, 0.856816, -4.7184525, 10.299562, 0.856816, -4.7184525, 8.549562, 0.856816, -4.4684525, 6.7995625, 0.856816, -3.7184525, 15.299562, 0.856816, -3.4684525, 4.0495625, 0.856816, 1.0315475, 2.2995625, 0.856816, 1.0315475, 2.2995625, 0.856816, 2.2815475, 6.5495625, 0.856816, 2.2815475, 4.2995625, 0.856816, -4.9684525, 2.2995625, 0.856816, -4.7184525, 2.2995625, 0.856816, -3.9684525, 4.2995625, 0.856816, -3.7184525, 4.2995625, 0.856816, -6.4684525, 3.7995625, 0.856816, -8.718452, 3.7995625, 0.856816, -6.7184525, 0.29956245, 0.856816, -4.7184525, 0.049562454, 0.856816, -3.7184525, 0.049562454, 0.856816, -0.71845245, 0.29956245, 0.856816, -1.9684525, -1.7004375, 0.856816, -8.718452, -1.7004375, 0.856816, 2.2815475, 0.29956245, 0.856816, 1.0315475, 0.049562454, 0.856816, -6.4684525)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(0, 8, 7), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 7), PackedInt32Array(4, 7, 9), PackedInt32Array(4, 9, 6), PackedInt32Array(10, 7, 8), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 20), PackedInt32Array(17, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(28, 25, 19), PackedInt32Array(25, 29, 19), PackedInt32Array(19, 29, 18), PackedInt32Array(18, 29, 10), PackedInt32Array(18, 10, 8), PackedInt32Array(31, 30, 29), PackedInt32Array(29, 30, 10), PackedInt32Array(17, 1, 16), PackedInt32Array(16, 1, 2), PackedInt32Array(4, 5, 15), PackedInt32Array(15, 5, 20), PackedInt32Array(24, 21, 14), PackedInt32Array(11, 28, 14), PackedInt32Array(14, 28, 19), PackedInt32Array(14, 19, 24), PackedInt32Array(26, 27, 32), PackedInt32Array(32, 27, 33), PackedInt32Array(35, 34, 33), PackedInt32Array(33, 34, 37), PackedInt32Array(33, 37, 36), PackedInt32Array(12, 13, 35), PackedInt32Array(35, 13, 34), PackedInt32Array(37, 34, 38), PackedInt32Array(22, 23, 38), PackedInt32Array(38, 23, 37), PackedInt32Array(31, 39, 30), PackedInt32Array(30, 39, 36), PackedInt32Array(32, 33, 39), PackedInt32Array(39, 33, 36)]
-
-[sub_resource type="Curve3D" id="Curve3D_3md0w"]
-closed = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 0, 0, 0, 0, 0, 0, 0, -8, 0, 3.5, 0, 0, 0, 0, 0, 0, -0.08, 0, 3.5),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
-}
-point_count = 4
+vertices = PackedVector3Array(11.555723, 0.85655594, -17.21829, 11.055723, 0.85655594, -15.46829, 12.805723, 0.85655594, -15.46829, 15.305723, 0.85655594, -15.71829, 4.555723, 0.85655594, -15.46829, 10.305723, 0.85655594, -15.46829, 7.555723, 0.85655594, -17.46829, 4.305723, 0.85655594, -17.96829, 4.305723, 0.85655594, -20.71829, 8.055723, 0.85655594, -19.21829, 9.055723, 0.85655594, -19.21829, 15.305723, 0.85655594, -20.71829, -1.4442768, 0.85655594, -7.7182903, -2.1942768, 0.85655594, -7.4682903, -1.9442768, 0.85655594, -6.4682903, 0.5557232, 0.85655594, -6.4682903, -5.194277, 0.85655594, -11.71829, -2.6942768, 0.85655594, -11.96829, -2.6942768, 0.85655594, -15.21829, -4.944277, 0.85655594, -17.71829, -5.194277, 0.85655594, -11.46829, -1.4442768, 0.85655594, -11.21829, 0.5557232, 0.85655594, -11.71829, 9.055723, 0.85655594, -8.46829, 9.305723, 0.85655594, -6.7182903, 9.555723, 0.85655594, -6.4682903, 15.305723, 0.85655594, -6.4682903, 12.805723, 0.85655594, -8.71829, 4.305723, 0.85655594, -6.4682903, 5.305723, 0.85655594, -6.4682903, 5.305723, 0.85655594, -8.46829, 4.305723, 0.85655594, -8.71829, -5.694277, 0.85655594, -11.21829, -7.694277, 0.85655594, -11.71829, -2.6942768, 0.85655594, -6.2182903, -5.694277, 0.85655594, -7.7182903, -7.694277, 0.85655594, -6.4682903, -4.944277, 0.85655594, -6.2182903, 1.0557232, 0.85655594, -0.46829033, 1.5557232, 0.85655594, -2.7182903, -2.6942768, 0.85655594, -2.9682903, -4.944277, 0.85655594, -0.46829033, 8.305723, 0.85655594, -6.4682903, 8.055723, 0.85655594, -2.4682903, 9.555723, 0.85655594, -0.46829033, 1.3057232, 0.85655594, 2.2817097, 3.5557232, 0.85655594, 2.2817097, 3.8057232, 0.85655594, -0.46829033)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(6, 7, 9), PackedInt32Array(9, 7, 8), PackedInt32Array(3, 0, 11), PackedInt32Array(11, 0, 10), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(16, 17, 20), PackedInt32Array(20, 17, 21), PackedInt32Array(21, 17, 22), PackedInt32Array(21, 22, 12), PackedInt32Array(12, 22, 15), PackedInt32Array(4, 18, 7), PackedInt32Array(7, 18, 19), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 27), PackedInt32Array(25, 27, 26), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(2, 3, 27), PackedInt32Array(27, 3, 26), PackedInt32Array(30, 31, 23), PackedInt32Array(23, 31, 27), PackedInt32Array(20, 32, 16), PackedInt32Array(16, 32, 33), PackedInt32Array(14, 34, 13), PackedInt32Array(13, 34, 37), PackedInt32Array(13, 37, 35), PackedInt32Array(35, 37, 36), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 41), PackedInt32Array(34, 40, 37), PackedInt32Array(37, 40, 41), PackedInt32Array(32, 35, 33), PackedInt32Array(33, 35, 36), PackedInt32Array(24, 25, 42), PackedInt32Array(42, 25, 43), PackedInt32Array(43, 25, 44), PackedInt32Array(39, 47, 38), PackedInt32Array(38, 47, 46), PackedInt32Array(38, 46, 45), PackedInt32Array(44, 47, 43), PackedInt32Array(43, 47, 39)]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kchll"]
 sky_top_color = Color(0.5648126, 0.7202057, 0.8377818, 1)
@@ -44,19 +35,14 @@ script = ExtResource("1_ogxhh")
 scene_text_file = "res://json/script.json"
 
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("5_n18bd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.824749, 0.874878, -12.434908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.122992, 1.5023079, -18.465952)
 text_key = "T4"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1834274329]
 navigation_mesh = SubResource("NavigationMesh_3md0w")
 
-[node name="tiledfloor" parent="NavigationRegion3D" unique_id=1176899292 instance=ExtResource("2_t2slc")]
-
 [node name="tiledfloor2" parent="NavigationRegion3D" unique_id=726144806 instance=ExtResource("2_t2slc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-
-[node name="tiledfloor3" parent="NavigationRegion3D" unique_id=2009740012 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 
 [node name="tiledfloor4" parent="NavigationRegion3D" unique_id=240657389 instance=ExtResource("2_t2slc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
@@ -67,99 +53,115 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
 [node name="tiledfloor6" parent="NavigationRegion3D" unique_id=452536048 instance=ExtResource("2_t2slc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
 
+[node name="tiledfloor8" parent="NavigationRegion3D" unique_id=1176899292 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+
 [node name="tiledfloor7" parent="NavigationRegion3D" unique_id=1944385594 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, -0.001801014, -0.009739921, -6.004711)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, -0.01, -3)
 
-[node name="tiledfloor8" parent="NavigationRegion3D" unique_id=1755924175 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 2.998182, -0.0007945999, -6.000002)
+[node name="tiledfloor25" parent="NavigationRegion3D" unique_id=301224522 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, -0.01, -6)
 
-[node name="tiledfloor9" parent="NavigationRegion3D" unique_id=1461652501 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 5.998165, 0.008150722, -5.995292)
+[node name="tiledfloor26" parent="NavigationRegion3D" unique_id=1085344671 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, -0.01, -9)
+
+[node name="tiledfloor27" parent="NavigationRegion3D" unique_id=2022618742 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -6, -0.01, -9)
 
 [node name="tiledfloor10" parent="NavigationRegion3D" unique_id=1235929845 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 0.0027439594, -0.0077534216, -8.903618)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 0.003, -0.008, -9)
 
-[node name="tiledfloor11" parent="NavigationRegion3D" unique_id=761468698 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -8.8989105)
+[node name="tiledfloor28" parent="NavigationRegion3D" unique_id=1208423927 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, -0.01, -12)
+
+[node name="tiledfloor30" parent="NavigationRegion3D" unique_id=1030892067 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, 0, -15)
+
+[node name="tiledfloor31" parent="NavigationRegion3D" unique_id=196732549 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -3, 0, -18)
+
+[node name="tiledfloor32" parent="NavigationRegion3D" unique_id=893700941 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 0, 0, -18)
+
+[node name="tiledfloor33" parent="NavigationRegion3D" unique_id=267577922 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 3, 0, -18)
+
+[node name="tiledfloor34" parent="NavigationRegion3D" unique_id=1446036824 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 6, 0, -18)
+
+[node name="tiledfloor29" parent="NavigationRegion3D" unique_id=982922117 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, -6, -0.01, -12)
+
+[node name="tiledfloor11" parent="NavigationRegion3D" unique_id=1674710595 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 0.003, -0.008, -12)
 
 [node name="tiledfloor12" parent="NavigationRegion3D" unique_id=1119182319 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 6.0027103, 0.010137222, -8.894198)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 6.0027103, 0.010137222, -9)
 
 [node name="tiledfloor13" parent="NavigationRegion3D" unique_id=576267823 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.964362, -0.009739921, -6.004711)
-
-[node name="tiledfloor14" parent="NavigationRegion3D" unique_id=1812253801 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 11.964346, -0.0007945999, -6.000002)
-
-[node name="tiledfloor15" parent="NavigationRegion3D" unique_id=1991027213 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.964329, 0.008150722, -5.995292)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 9, 0, -6)
 
 [node name="tiledfloor16" parent="NavigationRegion3D" unique_id=1710385467 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.968907, -0.0077534216, -8.903618)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 8.968907, -0.0077534216, -9)
 
 [node name="tiledfloor17" parent="NavigationRegion3D" unique_id=1988427287 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.966164, 0, -8.8989105)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.966164, 0, -9)
 
 [node name="tiledfloor18" parent="NavigationRegion3D" unique_id=1406215340 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.968874, 0.010137222, -8.894198)
-
-[node name="tiledfloor19" parent="NavigationRegion3D" unique_id=659648753 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.964362, -0.009739921, -11.847818)
-
-[node name="tiledfloor20" parent="NavigationRegion3D" unique_id=1334069592 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 11.964346, -0.0007945999, -11.843109)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 14.969, 0.01, -9)
 
 [node name="tiledfloor21" parent="NavigationRegion3D" unique_id=566067922 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.964329, 0.008150722, -11.8384)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 14.964, 0.008, -12)
+
+[node name="tiledfloor39" parent="NavigationRegion3D" unique_id=2000600144 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 14.964, 0.008, -15)
 
 [node name="tiledfloor22" parent="NavigationRegion3D" unique_id=1273691154 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 8.968907, -0.0077534216, -14.746725)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 9, -0.008, -18)
 
 [node name="tiledfloor23" parent="NavigationRegion3D" unique_id=1159138233 instance=ExtResource("2_t2slc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.966164, 0, -14.742018)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -18)
 
 [node name="tiledfloor24" parent="NavigationRegion3D" unique_id=1696311170 instance=ExtResource("2_t2slc")]
-transform = Transform3D(0.99999434, -0.0029828437, -0.0015678372, 0.002981774, 0.99999535, -0.00068525743, 0.0015698705, 0.0006805866, 0.99999857, 14.968874, 0.010137222, -14.737306)
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 15, 0.01, -18)
 
-[node name="Barrier" parent="NavigationRegion3D" unique_id=1751531890 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -0.060316384)
+[node name="tiledfloor35" parent="NavigationRegion3D" unique_id=1893957448 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 6, 0, -21)
+
+[node name="tiledfloor36" parent="NavigationRegion3D" unique_id=773931285 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 9, -0.008, -21)
+
+[node name="tiledfloor37" parent="NavigationRegion3D" unique_id=1286786247 instance=ExtResource("2_t2slc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -21)
+
+[node name="tiledfloor38" parent="NavigationRegion3D" unique_id=342759328 instance=ExtResource("2_t2slc")]
+transform = Transform3D(0.9999955, -0.0029817747, 0, 0.002981774, 0.9999953, -0.00068526546, 2.0433072e-06, 0.0006852624, 0.99999976, 15, 0.01, -21)
 
 [node name="Barrier2" parent="NavigationRegion3D" unique_id=22501623 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -2.894646)
+transform = Transform3D(-0.81917214, -0.001391952, 0.5735461, -0.0016755637, 0.9999987, 3.3777724e-05, -0.5735453, -0.00093334046, -0.8191734, 9.57316, 1.6959276, -17.347311)
 
 [node name="Barrier3" parent="NavigationRegion3D" unique_id=567465289 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.1061187, 1.6959759, -5.7501082)
-
-[node name="Barrier4" parent="NavigationRegion3D" unique_id=1129469164 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.34553, 1.6959759, -6.532118)
+transform = Transform3D(-0.9999931, -0.0016754422, -0.003318298, -0.0016755635, 0.99999857, 3.377779e-05, 0.0033182364, 3.9340834e-05, -0.9999945, -3.6348171, 1.6960242, -8.4015)
+is_interactable = false
 
 [node name="Barrier5" parent="NavigationRegion3D" unique_id=1595543186 instance=ExtResource("4_3md0w")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.008555, 1.6959759, -6.532118)
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 7.133177, 1.6959759, -7.5305786)
+
+[node name="Barrier6" parent="NavigationRegion3D" unique_id=2089853920 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.550436, 1.6875526, -10.470436)
+
+[node name="Barrier7" parent="NavigationRegion3D" unique_id=484271928 instance=ExtResource("4_3md0w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.22853, 1.6955435, -4.6251516)
+is_interactable = false
 
 [node name="Player" parent="." unique_id=642970210 instance=ExtResource("3_tvafx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.424111, 1.3748779, 1.7175574)
-
-[node name="Path3D" type="Path3D" parent="." unique_id=487328160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5968447, 0, -7.9727488)
-curve = SubResource("Curve3D_3md0w")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1139067908]
-transform = Transform3D(0.9997389, 0, -0.022851175, 0, 1, 0, 0.022851175, 0, 0.9997389, -2.3283064e-10, 0, 0)
-progress = 22.920921
-
-[node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_14qkt")]
-pathFollow = NodePath("..")
-path = NodePath("../..")
-pathStart = NodePath("../../pathStart")
-caughtscreen = NodePath("../../../CaughtScreen")
-
-[node name="pathStart" type="Node3D" parent="Path3D" unique_id=1795165006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4302511, 1.3748779, 1.635881)
 
 [node name="respawnzone" parent="." unique_id=1240018557 instance=ExtResource("7_kchll")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, -25, 2.732)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1374059284]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090364856]
