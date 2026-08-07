@@ -24,7 +24,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4wu7m"]
 
 [node name="CaughtScreen" type="Control" unique_id=1357129286]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,20 +35,20 @@ script = ExtResource("1_taaat")
 [node name="Label" type="Label" parent="." unique_id=1790627313]
 z_index = 3
 layout_mode = 0
-offset_left = 351.22
-offset_top = 278.0
-offset_right = 813.2202
-offset_bottom = 305.0
+offset_left = 699.0
+offset_top = 452.0
+offset_right = 1161.0002
+offset_bottom = 479.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "YOU HAVE BEEN CAUGHT ! 30 HOURS OF OVERTIME ADDED!!"
 
 [node name="Button" type="Button" parent="." unique_id=1358272910]
 z_index = 3
 layout_mode = 0
-offset_left = 473.0
-offset_top = 356.0
-offset_right = 663.0
-offset_bottom = 405.0
+offset_left = 820.78
+offset_top = 530.0
+offset_right = 1010.78
+offset_bottom = 579.0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_taaat")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_83bji")
@@ -57,20 +56,12 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_fwaff")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ipiyr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ahi15")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1229314952]
-z_index = -1
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(28.797249, 16.186512)
-color = Color(0, 0, 0, 1)
-
 [node name="PlayButton" type="Button" parent="." unique_id=1691255142]
 layout_mode = 0
-offset_left = 476.0
-offset_top = 353.0
-offset_right = 655.0
-offset_bottom = 406.0
+offset_left = 823.78
+offset_top = 527.0
+offset_right = 1002.78
+offset_bottom = 580.0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gkpa3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_m1jdr")
@@ -82,6 +73,14 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_4wu7m")
 position = Vector2(112, 28)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_83bji")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1229314952]
+z_index = -1
+layout_mode = 0
+offset_right = 66.846664
+offset_bottom = 66.96934
+scale = Vector2(28.797249, 16.186512)
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

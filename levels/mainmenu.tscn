@@ -36,21 +36,21 @@ script = ExtResource("1_b77a6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1850747102]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 66.916115
+offset_bottom = 67.46358
 scale = Vector2(28.797249, 16.186512)
 color = Color(0, 0, 0, 1)
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1653595369]
-position = Vector2(627, 212)
+position = Vector2(892, 350)
 texture = ExtResource("1_m1g0l")
 
 [node name="PlayButton" type="Button" parent="." unique_id=1309151670]
 layout_mode = 0
-offset_left = 484.0
-offset_top = 390.0
-offset_right = 663.0
-offset_bottom = 443.0
+offset_left = 814.0
+offset_top = 577.0
+offset_right = 993.0
+offset_bottom = 630.0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_bsv1t")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_b77a6")
@@ -65,10 +65,10 @@ texture = ExtResource("2_bsv1t")
 
 [node name="ExitButton" type="Button" parent="." unique_id=1730574452]
 layout_mode = 0
-offset_left = 488.0
-offset_top = 466.0
-offset_right = 667.0
-offset_bottom = 519.0
+offset_left = 818.0
+offset_top = 653.0
+offset_right = 997.0
+offset_bottom = 706.0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0v3g1")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jry3q")

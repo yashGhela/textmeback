@@ -11,10 +11,10 @@ anchor_left = -0.12847222
 anchor_top = -0.086419754
 anchor_right = 0.1388889
 anchor_bottom = 0.1404321
-offset_left = 297.0
-offset_top = 80.0
-offset_right = 883.0
-offset_bottom = 537.0
+offset_left = 619.6667
+offset_top = 239.33334
+offset_right = 1205.6667
+offset_bottom = 696.3333
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
