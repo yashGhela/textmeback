@@ -1,11 +1,12 @@
 extends Node3D
 
 @onready var player:CharacterBody3D = get_tree().get_first_node_in_group("Player")
-
+@onready var bgmusic = $bgmusic
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 	Signalbus.connect("shakeShelf",Callable(self,"on_shake_shelf"))
+	bgmusic.play()
 
 func on_shake_shelf(location):
 	print(location)
@@ -37,3 +38,7 @@ func get_closest_enemy(location:Vector3) -> CharacterBody3D:
 	return closest
 
 	
+
+
+func _on_bgmusic_finished() -> void:
+	bgmusic.play() # Replace with function body.

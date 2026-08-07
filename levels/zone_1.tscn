@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_pfnxa"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="8_384l5"]
 [ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="9_8dnxx"]
+[ext_resource type="AudioStream" uid="uid://c7cx7yhx2amcr" path="res://assets/sfx/STEALTH  8-Bit Adventure [Chiptune  No Copyright Music].mp3" id="10_1pddc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x7iw5"]
 vertices = PackedVector3Array(-0.44316864, 0.8606547, 2.031971, -0.19316864, 0.8606547, 2.531971, 1.5568314, 0.8606547, 1.781971, 1.8068314, 0.8606547, 0.031970978, -2.4431686, 0.8606547, -1.718029, -1.9431686, 0.8606547, 2.031971, 9.306831, 0.8606547, -3.718029, 7.3068314, 0.8606547, -3.718029, 7.0568314, 0.8606547, -1.718029, -2.6931686, 0.8606547, -3.718029, -4.6931686, 0.8606547, -3.718029, -4.6931686, 0.8606547, 4.031971, -2.1931686, 0.8606547, 4.031971, 5.8068314, 0.8606547, 1.531971, 9.306831, 0.8606547, 1.531971, 5.5568314, 0.8606547, 0.031970978, 5.5568314, 0.8606547, 8.781971, 3.8068314, 0.8606547, 8.781971, 3.8068314, 0.8606547, 9.281971, 9.306831, 0.8606547, 9.281971, 5.5568314, 0.8606547, 2.031971, 3.8068314, 0.8606547, 2.031971, 3.8068314, 0.8606547, 6.781971, 5.8068314, 0.8606547, 7.031971, 1.8068314, 0.8606547, 8.781971, -4.6931686, 0.8606547, 9.281971, -2.1931686, 0.8606547, 6.031971, -0.44316864, 0.8606547, 6.281971, 1.5568314, 0.8606547, 7.031971)
@@ -142,7 +143,7 @@ curve = SubResource("Curve3D_x7iw5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7296972, 0.23289537, -0.07792556)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1065151989]
-transform = Transform3D(-0.99999434, 0, 1.5099505e-07, 0, 0.999999, 0, -1.5099495e-07, 0, -0.99999505, -2, 0, 0)
+transform = Transform3D(-0.99999434, 0, -8.742234e-08, 0, 0.999999, 0, 8.742228e-08, 0, -0.99999505, -2, 0, 0)
 
 [node name="Boss" parent="Path3D/PathFollow3D" unique_id=150727419 node_paths=PackedStringArray("pathFollow", "path", "pathStart", "caughtscreen") instance=ExtResource("6_pfnxa")]
 pathFollow = NodePath("..")
@@ -164,3 +165,8 @@ shadow_enabled = true
 environment = SubResource("Environment_1pddc")
 
 [node name="CaughtScreen" parent="." unique_id=1357129286 instance=ExtResource("9_8dnxx")]
+
+[node name="bgmusic" type="AudioStreamPlayer3D" parent="." unique_id=631583771]
+stream = ExtResource("10_1pddc")
+
+[connection signal="finished" from="bgmusic" to="." method="_on_bgmusic_finished"]

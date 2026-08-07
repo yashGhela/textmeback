@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7cx7yhx2amcr"
+path="res://.godot/imported/STEALTH  8-Bit Adventure [Chiptune  No Copyright Music].mp3-fc2c592b910a63dc419b4ffe9bd763c8.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/STEALTH  8-Bit Adventure [Chiptune  No Copyright Music].mp3"
+dest_files=["res://.godot/imported/STEALTH  8-Bit Adventure [Chiptune  No Copyright Music].mp3-fc2c592b910a63dc419b4ffe9bd763c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1253,7 +1253,7 @@ path_height_offset = 0.1
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.005, -0.8787254, 0.036)
 
 [node name="Armature" type="Node3D" parent="character" unique_id=1022224346]
-transform = Transform3D(-49.25858, 8.298228, 2.175231, 2.2502444, 0.2643956, 49.94864, 8.278202, 49.305874, -0.6339359, 0.012791147, 0.6769666, -0.037912864)
+transform = Transform3D(-49.258556, 8.298406, 2.1751068, 2.2501159, 0.26436743, 49.948647, 8.27838, 49.305847, -0.6338947, 0.012791147, 0.6769666, -0.037912864)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="character/Armature" unique_id=1879192078]
 bones/0/name = "Bone"

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dmmbrb43t7noi" path="res://game-elements/boss.tscn" id="6_2iwax"]
 [ext_resource type="PackedScene" uid="uid://baqowwo0tlkb3" path="res://game-elements/respawnzone.tscn" id="7_57via"]
 [ext_resource type="PackedScene" uid="uid://y2t81fwvojvq" path="res://game-elements/caught_screen.tscn" id="8_tieyt"]
+[ext_resource type="AudioStream" uid="uid://c7cx7yhx2amcr" path="res://assets/sfx/STEALTH  8-Bit Adventure [Chiptune  No Copyright Music].mp3" id="10_2iwax"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_57via"]
 sky_top_color = Color(0.5648126, 0.7202057, 0.8377818, 1)
@@ -241,3 +242,8 @@ caughtscreen = NodePath("../../../CaughtScreen")
 [node name="WifiPoint" parent="." unique_id=9886394 instance=ExtResource("3_cheaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.456066, 1.9067504, -19.098198)
 text_key = "T2"
+
+[node name="bgmusic" type="AudioStreamPlayer3D" parent="." unique_id=946479801]
+stream = ExtResource("10_2iwax")
+
+[connection signal="finished" from="bgmusic" to="." method="_on_bgmusic_finished"]
